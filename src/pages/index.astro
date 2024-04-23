@@ -1,0 +1,21 @@
+---
+import { format } from "date-fns";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+
+<BaseLayout>
+	<a href="https://twitter.com/ashishk1331" class="text-sm border-b border-zinc-300 text-zinc-300">@ashishk1331</a>
+	<h1>Blog</h1>
+	<ul class="flex flex-col gap-y-4">
+		{
+			allPosts.map((post) => (
+				<li class="flex items-top gap-x-4">
+					<span class="text-neutral-500">{format(post.frontmatter.pubDate, 'yyyy MM')}</span>
+					<a href={post.url} class="underline flex-1 text-neutral-200">{post.frontmatter.title}</a>
+				</li>
+			))
+		}
+	</ul>
+</BaseLayout>
