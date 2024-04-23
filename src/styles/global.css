@@ -1,15 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Space+Grotesk:wght@300..700&display=swap');
-
-/* The integration's default injected base.css file */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-	font-family: "Inconsolata", monospace;
-  	font-optical-sizing: auto;
+:root {
+    --background: #101010;
+    --muted: #a3a3a3;
+    --text: #E5E7EB;
 }
-
-h1 {
-	@apply text-2xl font-medium my-12;
+* {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-size: 14px;
+}
+body {
+    background: var(--background);
+    color: var(--text);
+    max-width: 80ch;
+    width: 100%;
+    padding: 8rem 4rem;
+    margin: 0 auto;
+    /*Display properties*/
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 480px) {
+    * {
+        font-size: 12px;
+    }
+    body {
+        padding: 8rem 2rem;
+    }
+}
+h1.lead {
+    margin: 3rem 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+li>a {
+    font-size: 1.2rem;
+}
+li>span {
+    color: var(--muted);
+    font-size: 1.2rem;
+}
+a:visited {
+    color: var(--text);
 }
