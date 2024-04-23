@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 
 title: "'Wish on an eyelash' for Telegram"
+slug: wish-on-an-eyelash-for-telegram
 pubDate: 2024-04-23
 ---
 

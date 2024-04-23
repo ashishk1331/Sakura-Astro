@@ -9,8 +9,8 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout>
 	<a href="/" class="text-sm border-b border-zinc-300 text-zinc-300">back</a>
-	<h1>{frontmatter.title}</h1>
-	<article class="flex flex-col gap-y-4 text-neutral-300">
+	<h1 class="lead">{frontmatter.title}</h1>
+	<article>
 		<slot />
 	</article>
 </BaseLayout>

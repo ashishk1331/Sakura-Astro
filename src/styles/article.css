@@ -1,3 +1,10 @@
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	line-height: 2rem;
+}
+
 article a {
 	text-decoration: underline;
 }
