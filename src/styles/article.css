@@ -5,11 +5,15 @@ article {
 	line-height: 2rem;
 }
 
+article p {
+	font-size: 1.2rem;
+}
+
 article a {
 	text-decoration: underline;
 }
 
 article hr {
 	margin: 2rem 0;
-	border-top: 2px solid #262626;	
+	border-top: 2px solid #262626;
 }
