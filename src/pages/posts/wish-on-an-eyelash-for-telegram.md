@@ -4,6 +4,11 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "'Wish on an eyelash' for Telegram"
 slug: wish-on-an-eyelash-for-telegram
 pubDate: 2024-04-23
+
+ogImage: '/public/blogs/wish-on-an-eyelash-for-telegram.webp'
+
+description: 'Why WhatsApp Still Reigns: Understanding the Persistent Popularity of Established Messaging Apps'
+author: 'Ashish Khare'
 ---
 
 Recently, I came across a post at Peerlist by Mohit Chaprana: **Messaging apps monthly active users in 2024** which told about the user base of each messaging app including WhatsApp, Messenger, WeChat, Viber and Telegram and his premise was that in the era of Signal and Telegram why people are still struggling with WhatsApp?

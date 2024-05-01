@@ -9,6 +9,8 @@ Initial Version of the Blog Template
 	2. `/about` a detailed page about yourself
 	3. `/blog` to show list of all written blogs
 	4. `/work` couple of work experience points
+	5. `/contact` home for all your social detials
+	6. `404` custom 404 page(as well)
 
 2. Rss feed added `/rss.xml`
 
@@ -17,7 +19,9 @@ Initial Version of the Blog Template
 4. Shift from `Sass` -> `Tailwind CSS`.
 	Added `tailwind-typography` plugin.
 
-5. **Footer** with all navigation links.
+5. Add open graph images under `/public/blogs/[name]`
+
+6. **Footer** with all navigation links.
 
 ---
 
@@ -25,9 +29,3 @@ Initial Version of the Blog Template
 To Add:
 
 1. improved documentation with how-to guides
-
-2. open graph images
-
-4. tags for `.md` posts
-
-6. `/contact` home for all your social detials

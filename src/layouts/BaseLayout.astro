@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const pageTitle = Astro.props.pageTitle || "Home Page";
+
+const frontmatter = Astro.props.frontmatter || null;
 ---
 
 <html lang="en">
@@ -13,6 +15,15 @@ const pageTitle = Astro.props.pageTitle || "Home Page";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+
+    {frontmatter && (
+      <>
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={frontmatter.description} />
+        <meta property="og:image" content={frontmatter.ogImage} />
+      </>
+    )}
+
     <ViewTransitions />
   </head>
   <body class="lg:w-[80ch] min-h-screen mx-auto flex flex-col justify-between gap-8 p-8 lg:p-16 bg-[#101010] text-neutral-200">
