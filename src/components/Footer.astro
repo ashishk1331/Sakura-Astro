@@ -1,0 +1,48 @@
+---
+import { captilize } from "../../utils/textUtils.js";
+
+const LINKS = {
+	information: [
+		{
+			title: 'About',
+			href: '/about'
+		},
+		{
+			title: 'Work',
+			href: '/work'
+		},
+		{
+			title: 'Contact',
+			href: '/conatct'
+		},
+	],
+	browse: [
+		{
+			title: 'Blog',
+			href: '/blog'
+		},
+		{
+			title: 'Twitter',
+			href: 'https://twitter.com/AshishK1331'
+		},
+	],
+};
+
+---
+
+<footer class="text-sm grid grid-cols-2 gap-8 mt-16">
+	{
+		Object.keys(LINKS).map((key) => (
+			<ul class="space-y-4">
+				<span class="font-medium">{captilize(key)}</span>
+				{
+					LINKS[key].map(({ title, href }) => (
+						<li class="text-xs">
+							<a href={href}>{title}</a>
+						</li>
+					))
+				}
+			</ul>
+		))
+	}
+</footer>

@@ -11,7 +11,8 @@ I'm working on this template, so I'll see some breaking changes sometimes! ;)
 
 ## TO ADD
 - [ ] Astro font
-- [ ] minimal footer
+- [ ] minimal footer eg: bearblog.dev
+- [ ] complete typography for `article`
 
 ## Want to add something?
 I would love to accept contributions. And now how?

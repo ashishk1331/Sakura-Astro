@@ -1,21 +1,21 @@
 ---
-import { format } from "date-fns";
-
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
 <BaseLayout>
-	<a href="https://twitter.com/ashishk1331">@ashishk1331</a>
-	<h1 class="lead">Blog</h1>
-	<ul>
-		{
-			allPosts.map((post) => (
-				<li>
-					<span>{format(post.frontmatter.pubDate, 'yyyy MM')}</span>
-					<a href={post.url}>{post.frontmatter.title}</a>
-				</li>
-			))
-		}
-	</ul>
+	<main class="flex flex-col gap-y-8 text-sm leading-8">
+		<h1 class="text-2xl lg:text-3xl my-16">Ashish Khare</h1>
+		
+		<p>
+			Hey, I'm Ashish Khare, an design engineer intern at <a href="https://frontendhire.com/">Frontend-Hire</a>. I enjoy making cool-looking websites. I love playing with design and figuring out how to make things user-friendly. Sure, I'm just starting out, but I'm all about creating slick interfaces and clean code. Take a look at my work and let me know what you think. Catch you later!
+		</p>
+
+		<p class="italic font-light">
+			Code and servers meet,
+			<br />
+			Pipelines flow without a hitch
+			<br />
+			DevOps in action.
+		</p>
+	</main>
 </BaseLayout>

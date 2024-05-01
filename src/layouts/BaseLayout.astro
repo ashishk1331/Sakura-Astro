@@ -1,6 +1,9 @@
 ---
-import '../styles/global.css';
-const pageTitle = "Home Page";
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = Astro.props.pageTitle || "Home Page";
 ---
 <html lang="en">
   <head>
@@ -9,8 +12,11 @@ const pageTitle = "Home Page";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <ViewTransitions />
   </head>
-  <body>
+  <body class="lg:w-[80ch] min-h-screen mx-auto flex flex-col justify-between gap-8 p-8 lg:p-16 bg-[#101010] text-neutral-200">
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
