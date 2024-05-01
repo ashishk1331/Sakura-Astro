@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Picture } from "astro-imagetools/components";
+---
+
+<BaseLayout>
+	<main class="flex flex-col gap-y-8 text-sm leading-8">
+		<div class="my-16">
+			<h1 class="text-2xl lg:text-3xl">Work Experience</h1>
+			<p>2024 - Present</p>
+		</div>
+		
+		<p>
+			I thrive in small teams, ideally with no more than 10 people. This type of environment allows me to make meaningful contributions and play a role in key decisions. I also enjoy consulting on product designs and patterns. Take a look at my list of experiences to learn more about my areas of expertise.
+		</p>
+
+		<p class="italic font-light">
+			React in my hands, 
+			<br /> 
+			Components build and rebuild,
+			<br />
+			Next.js, my path.  
+		</p>
+
+
+		<ul class="my-16 space-y-16">
+			<li class="space-y-8">
+				<a href="https://www.frontendhire.com/" class="w-full rounded overflow-hidden">
+					<Picture
+					  src="/public/Frontend-hire.jpg"
+					  alt="Banner about different states of labels."
+					/>
+				</a>
+
+				<div class="w-full grid grid-cols-4 gap-2">
+					<p>2024</p>
+					<div class="col-span-3">
+						<h2 class="font-bold">Design Engineer Intern</h2>
+						<span class="text-xs leading-6">Frontend-Hire Remote</span>
+						<p>Responsible for crafting user engaging interfaces for Frontend-Hire. Also, I've been working closely with technologies like ReactJS, handling Markdown in NextJS and Figma.</p>
+					</div>
+				</div>
+			</li>
+
+			<li class="space-y-8">
+				<a href="https://tetra-docs.vercel.app/" class="w-full rounded overflow-hidden">
+					<Picture
+					  src="/public/Tetrapack.jpg"
+					  alt="Banner about different states of labels."
+					/>
+				</a>
+
+				<div class="w-full grid grid-cols-4 gap-2">
+					<p>Present</p>
+					<div class="col-span-3">
+						<h2 class="font-bold">Creator</h2>
+						<span class="text-xs leading-6">Remote</span>
+						<p>A fast and semantic Notion API data renderer for react projects.</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</main>
+</BaseLayout>
