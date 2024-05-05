@@ -4,7 +4,7 @@ import { Picture } from "astro-imagetools/components";
 ---
 
 <BaseLayout pageTitle="Work">
-	<main class="flex flex-col gap-y-8 text-sm leading-8">
+	<main class="flex flex-col gap-y-8 leading-8">
 		<div class="my-16">
 			<h1 class="text-2xl lg:text-3xl">Work Experience</h1>
 			<p>2024 - Present</p>
@@ -25,7 +25,25 @@ import { Picture } from "astro-imagetools/components";
 
 		<ul class="my-16 space-y-16">
 			<li class="space-y-8">
-				<a href="https://www.frontendhire.com/" class="w-full rounded overflow-hidden">
+				<a href="https://go-north.vercel.app/" class="w-full rounded-md overflow-hidden">
+					<Picture
+					  src="/public/banner-go-north.webp"
+					  alt="Banner about different states of labels."
+					/>
+				</a>
+
+				<div class="w-full grid grid-cols-4 gap-2">
+					<p>2024</p>
+					<div class="col-span-3">
+						<h2 class="font-bold">Founder</h2>
+						<span class="text-xs leading-6">Go North</span>
+						<p>We are a small-time design agency who craft templates and interfaces to captivate soul of the idea and help others get started with their projects faster. Feel free to contact us to know more! </p>
+					</div>
+				</div>
+			</li>
+
+			<li class="space-y-8">
+				<a href="https://www.frontendhire.com/" class="w-full rounded-md overflow-hidden">
 					<Picture
 					  src="/public/Frontend-hire.jpg"
 					  alt="Banner about different states of labels."
@@ -42,8 +60,9 @@ import { Picture } from "astro-imagetools/components";
 				</div>
 			</li>
 
+
 			<li class="space-y-8">
-				<a href="https://tetra-docs.vercel.app/" class="w-full rounded overflow-hidden">
+				<a href="https://tetra-docs.vercel.app/" class="w-full rounded-md overflow-hidden">
 					<Picture
 					  src="/public/Tetrapack.jpg"
 					  alt="Banner about different states of labels."
@@ -51,7 +70,7 @@ import { Picture } from "astro-imagetools/components";
 				</a>
 
 				<div class="w-full grid grid-cols-4 gap-2">
-					<p>Present</p>
+					<p>2023 - Present</p>
 					<div class="col-span-3">
 						<h2 class="font-bold">Creator</h2>
 						<span class="text-xs leading-6">Remote</span>

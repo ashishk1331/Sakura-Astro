@@ -8,7 +8,7 @@ I'm working on this template, so I'll see some breaking changes sometimes! ;)
 ## Features
 
 1. Minimal theme with page transitions and smooth scroll
-2. Ships with no cliet-side logic
+2. Ships with no client-side logic
 3. support for RSS, Image optimisation and OpenGraph Images
 4. Small bundle size around ~ 3KB
 

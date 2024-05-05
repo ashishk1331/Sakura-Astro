@@ -1,5 +1,17 @@
 # Sakura
 
+## 0.1.1
+
+### Patch Changes
+
+- Minor design tweaks and Information addition
+
+  1. Fix the body `justification` problem
+
+  2. Add information about [Go North](https://go-north.vercel.app/)
+
+  3. Increased the font-size to `base` for more legibility.
+
 ## 0.1.0
 
 ### Minor Changes
