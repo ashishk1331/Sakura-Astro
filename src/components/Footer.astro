@@ -4,8 +4,8 @@ import { captilize } from "../../utils/textUtils.js";
 const LINKS = {
 	information: [
 		{
-			title: 'About',
-			href: '/about'
+			title: 'Home',
+			href: '/'
 		},
 		{
 			title: 'Work',
@@ -41,7 +41,7 @@ const LINKS = {
 				<span class="font-medium">{captilize(key)}</span>
 				{
 					LINKS[key].map(({ title, href }) => (
-						<li class="text-xs">
+						<li>
 							<a href={href}>{title}</a>
 						</li>
 					))

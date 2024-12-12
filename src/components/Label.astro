@@ -1,0 +1,9 @@
+---
+const { title, link, imageSource } = Astro.props;
+const imageFound = Boolean(imageSource);
+---
+
+<a href={link} class="group inline-flex items-baseline">
+	{imageFound && <img src={imageSource} alt="" class="self-center w-5 h-5 rounded-full mx-1" />}
+	<span class="lg:group-hover:underline">{title}</span>
+</a>
