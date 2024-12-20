@@ -1,4 +1,5 @@
 ---
+import { format } from "date-fns";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Label from "../components/Label.astro";
 import { Picture } from "astro-imagetools/components";
@@ -48,49 +49,89 @@ const bf_compiler_data = {
 	link: "https://github.com/ashishk1331/BrainFuck-Compiler",
 	imageSource: BFCompilerLogo.src,
 };
+
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));;
+// console.log(allPosts.map(post => post.frontmatter.pubDate));
 ---
 
 <BaseLayout>
 	<main class="flex flex-col gap-y-8 leading-8">
 		<h1 class="text-2xl lg:text-3xl my-16">Ashish Khare</h1>
-		
+
 		<Picture
-		  src="/public/zoro-blond.jpg"
-		  alt="Banner about different states of labels."
+			src="/public/zoro-blond.jpg"
+			alt="Banner about different states of labels."
 		/>
 
 		<p>
-			Zoro on Frank Ocean's blond. I love listening to <i>Pink+White</i>. Rest I spent listening to <i>Chainsmokers</i>, <i>Kendrik Lamar</i>, <i>Metro Boomin</i>, <i>Weeknd</i> and <i>Kanye West</i>. My Spotify wrapped placed me among their top 0.1% listeners. Red heart!
+			Zoro on Frank Ocean's blond. I love listening to <i>Pink+White</i>.
+			Rest I spent listening to <i>Chainsmokers</i>, <i>Kendrik Lamar</i>, <i
+				>Metro Boomin</i
+			>, <i>Weeknd</i> and <i>Kanye West</i>. My Spotify wrapped placed me
+			among their top 0.1% listeners. Red heart!
 		</p>
 
 		<p>
-			Hello! I'm a web designer and developer. I've build web-based tooling like <Label {...tetra_data}/> and <Label {...folder_routing_data}/>.
-			Recently, I've found an unknown attraction towards building web services in Go. I wish to onboard the Go and HTMX hype train.
+			Hello! I'm a web designer and developer. I've build web-based
+			tooling like <Label {...tetra_data} /> and <Label
+				{...folder_routing_data}
+			/>. Recently, I've found an unknown attraction towards building web
+			services in Go. I wish to onboard the Go and HTMX hype train.
 		</p>
 
 		<p>
-			Do you like challenges? So do I. Here are a few for you to try like <Label {...crack_the_nut_data}/> and <Label {...days_of_code_data}/>. Although the 100-day challenge is still a work in progress, you can get a taste of what it will offer from the website.
+			Do you like challenges? So do I. Here are a few for you to try like <Label
+				{...crack_the_nut_data}
+			/> and <Label {...days_of_code_data} />. Although the 100-day
+			challenge is still a work in progress, you can get a taste of what
+			it will offer from the website.
 		</p>
 
 		<p>
-			I adore python. Only the computer language! I've used it to do web scraping, building APIs and even for image processing. The <Label {...bleach_db_data}/>, <Label {...image_algos_data}/> and <Label {...bf_compiler_data}/> are written in python. The simplicity of Python has captivated me for years. You can write Python as if you were reading English.
+			I adore python. Only the computer language! I've used it to do web
+			scraping, building APIs and even for image processing. The <Label
+				{...bleach_db_data}
+			/>, <Label {...image_algos_data} /> and <Label
+				{...bf_compiler_data}
+			/> are written in python. The simplicity of Python has captivated me
+			for years. You can write Python as if you were reading English.
 		</p>
 
 		<p>
-			Plus, you can use it for machine learning tasks and scientific computation. Isn't that ironic to hear? Hence, this is my next plan. Soon I'll be writing a paragraph about it as well.
-			Here are few lines from the zen of python one could also apply in their daily lives.
+			Plus, you can use it for machine learning tasks and scientific
+			computation. Isn't that ironic to hear? Hence, this is my next plan.
+			Soon I'll be writing a paragraph about it as well. Here are few
+			lines from the zen of python one could also apply in their daily
+			lives.
 		</p>
 
-		<blockquote class="font-thin italic">
+		<blockquote class="italic">
 			If the implementation is hard to explain, it's a bad idea.
 			<br />
 			If the implementation is easy to explain, it may be a good idea.
 		</blockquote>
 
 		<p>
-			I aim to write more, so I started working on this template. You can expect blogs from me now—maybe one each week. Share your thoughts on Twitter <i>@ashishk1331</i>. I'd love to hear from you!
+			I aim to write more, so I started working on this template. You can
+			expect blogs from me now—maybe one each week. Share your thoughts on
+			Twitter <i>@ashishk1331</i>. I'd love to hear from you!
 		</p>
 
+		<hr />
+
+		<h2>Latest Blog Posts</h2>
+
+		<ul class="space-y-4">
+			{
+				allPosts.map((post) => (
+					<li class="text-sm space-x-4">
+						<span class="text-neutral-500">
+							{format(post.frontmatter.pubDate, "yyyy MM")}
+						</span>
+						<a href={post.url}>{post.frontmatter.title}</a>
+					</li>
+				))
+			}
+		</ul>
 	</main>
-	<hr />
 </BaseLayout>
