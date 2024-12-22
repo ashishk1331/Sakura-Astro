@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Label from "../components/Label.astro";
 import { Picture } from "astro-imagetools/components";
+import { fetchBlogs } from "../utils/blogUtils";
 
 import TetraLogo from "/public/logos/tetrapack_logo.svg";
 import FolderLogo from "/public/logos/folder_routing_logo.svg";
@@ -50,8 +51,7 @@ const bf_compiler_data = {
 	imageSource: BFCompilerLogo.src,
 };
 
-let allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
-	.filter(post => !post.frontmatter.draft);
+let allPosts = fetchBlogs();
 ---
 
 <BaseLayout>

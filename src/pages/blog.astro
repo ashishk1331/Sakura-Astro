@@ -1,9 +1,9 @@
 ---
 import { format } from "date-fns";
+import { fetchBlogs } from "../utils/blogUtils";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
-	.filter(post => !post.frontmatter.draft);
+let allPosts = fetchBlogs();
 ---
 
 <BaseLayout pageTitle="Blog">
