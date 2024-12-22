@@ -1,5 +1,5 @@
 export function fetchBlogs() {
-	const isAtDEV = import.meta.env.ENV === "DEV";
+	const isAtDEV = import.meta.env.DEV;
 	const allPosts = Object.values(
 		import.meta.glob("../pages/posts/*.md", { eager: true }),
 	);
