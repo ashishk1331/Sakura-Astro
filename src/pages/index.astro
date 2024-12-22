@@ -50,8 +50,8 @@ const bf_compiler_data = {
 	imageSource: BFCompilerLogo.src,
 };
 
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));;
-// console.log(allPosts.map(post => post.frontmatter.pubDate));
+let allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
+	.filter(post => !post.frontmatter.draft);
 ---
 
 <BaseLayout>

@@ -4,11 +4,12 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "Why the heck ShadCN?"
 slug: why-the-heck-shadcn
 pubDate: 2024-05-01
+draft: false
 
-ogImage: '/public/blogs/why-the-heck-shadcn.webp'
+ogImage: "/public/blogs/why-the-heck-shadcn.webp"
 
 description: "People are mad about ShadCN UI library. But I can't grasp my mind around the idea"
-author: 'Ashish Khare'
+author: "Ashish Khare"
 ---
 
 I don't want to set a premise for this post. Let me put it out straight: People are madly using it. I can easily comprehend why people shifted to Tailwind CSS instead of using Bootstrap or doing it all vanilla with CSS modules. Tailwind CSS introduced a completely new paradigm of styling. Like how emotion and styled-components, revolutionized the styling world. On the other hand, Shadcn UI opts in for the palest approach and does nothing new.

@@ -2,7 +2,8 @@
 import { format } from "date-fns";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));;
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
+	.filter(post => !post.frontmatter.draft);
 ---
 
 <BaseLayout pageTitle="Blog">
