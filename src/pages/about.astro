@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Picture } from "astro-imagetools/components";
+import { Image } from "astro:assets";
+import Banner from "../assets/Banner.jpg"
 ---
 
 <BaseLayout pageTitle="About">
@@ -12,8 +13,8 @@ import { Picture } from "astro-imagetools/components";
 		</p>
 
 		<div class="w-full rounded overflow-hidden">
-			<Picture
-			  src="/public/Banner.jpg"
+			<Image
+			  src={Banner}
 			  alt="Banner about different states of labels."
 			/>
 		</div>

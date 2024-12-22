@@ -2,16 +2,17 @@
 import { format } from "date-fns";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Label from "../components/Label.astro";
-import { Picture } from "astro-imagetools/components";
+import { Image } from "astro:assets";
 import { fetchBlogs } from "../utils/blogUtils";
 
-import TetraLogo from "/public/logos/tetrapack_logo.svg";
-import FolderLogo from "/public/logos/folder_routing_logo.svg";
-import DaysCodeLogo from "/public/logos/100_days_of_code_logo.svg";
-import CrackNutLogo from "/public/logos/crack_the_nut_logo.svg";
-import BleachLogo from "/public/logos/bleach_logo.svg";
-import ImageAlgoLogo from "/public/logos/imgs_logo.svg";
-import BFCompilerLogo from "/public/logos/compiler_logo.svg";
+import ZoroImage from "../assets/zoro-blond.jpg";
+import TetraLogo from "../assets/logos/tetrapack_logo.svg";
+import FolderLogo from "../assets/logos/folder_routing_logo.svg";
+import DaysCodeLogo from "../assets/logos/100_days_of_code_logo.svg";
+import CrackNutLogo from "../assets/logos/crack_the_nut_logo.svg";
+import BleachLogo from "../assets/logos/bleach_logo.svg";
+import ImageAlgoLogo from "../assets/logos/imgs_logo.svg";
+import BFCompilerLogo from "../assets/logos/compiler_logo.svg";
 
 const tetra_data = {
 	title: "tetrapack",
@@ -58,9 +59,12 @@ let allPosts = fetchBlogs();
 	<main class="flex flex-col gap-y-8 leading-8">
 		<h1 class="text-2xl lg:text-3xl my-16">Ashish Khare</h1>
 
-		<Picture
-			src="/public/zoro-blond.jpg"
+		<Image
+			loading="eager"
+			src={ZoroImage}
 			alt="Banner about different states of labels."
+			width={512}
+			height={512}
 		/>
 
 		<p>
