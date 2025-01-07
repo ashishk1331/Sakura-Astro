@@ -15,25 +15,15 @@ allBlogPosts = allBlogPosts.filter((post) => isAtDEV || !post.data.draft);
 allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
 ---
 
-<ul class="space-y-12">
+<ul class="space-y-4">
 	{
 		allBlogPosts.slice(0, 4).map((post) => (
-			<li class="space-y-4">
-				<a href={`/posts/${post.data.slug}`} class="w-full aspect-video overflow-hidden">
-					<Image
-						loading="lazy"
-						src={post.data.cover}
-						alt={post.data.coverAlt}
-						width={512}
-						height={512}
-						class="w-full object-cover self-center"
-					/>
-				</a>
+			<li>
 				<div class="text-sm space-x-4">
 					<span class="text-neutral-500">
 						{format(post.data.pubDate, "yyyy MM")}
 					</span>
-					<a href={"/posts/"+post.data.slug}>{post.data.title}</a>
+					<a href={"/posts/"+post.data.slug} class="underline underline-offset-2">{post.data.title}</a>
 				</div>
 			</li>
 		))
