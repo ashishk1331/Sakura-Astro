@@ -1,9 +1,8 @@
 ---
-import { format } from "date-fns";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Label from "../components/Label.astro";
 import { Image } from "astro:assets";
-import { fetchBlogs } from "../utils/blogUtils";
+import BlogPosts from "../components/BlogPosts.astro";
 
 import ZoroImage from "../assets/zoro-blond.jpg";
 import TetraLogo from "../assets/logos/tetrapack_logo.svg";
@@ -51,8 +50,6 @@ const bf_compiler_data = {
 	link: "https://github.com/ashishk1331/BrainFuck-Compiler",
 	imageSource: BFCompilerLogo.src,
 };
-
-let allPosts = fetchBlogs();
 ---
 
 <BaseLayout>
@@ -126,17 +123,6 @@ let allPosts = fetchBlogs();
 
 		<h2>Latest Blog Posts</h2>
 
-		<ul class="space-y-4">
-			{
-				allPosts.map((post) => (
-					<li class="text-sm space-x-4">
-						<span class="text-neutral-500">
-							{format(post.frontmatter.pubDate, "yyyy MM")}
-						</span>
-						<a href={post.url}>{post.frontmatter.title}</a>
-					</li>
-				))
-			}
-		</ul>
+		<BlogPosts count={4} />
 	</main>
 </BaseLayout>

@@ -2,6 +2,8 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 
 title: Go over rust
+cover: ../../assets/blogs/use-generators-for-magic-in-react/banner.webp
+coverAlt: random blocks
 slug: go-over-rust
 pubDate: 2024-12-19
 draft: true

@@ -2,6 +2,8 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 
 title: Use generators for magic in React
+cover: ../../assets/blogs/use-generators-for-magic-in-react/banner.webp
+coverAlt: random blocks
 slug: use-generators-for-magic-in-react
 pubDate: 2024-12-25
 
