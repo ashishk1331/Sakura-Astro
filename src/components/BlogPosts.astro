@@ -6,16 +6,11 @@ interface Props {
 	count?: number;
 }
 
-function sortByDates(posts) {
-	posts.sort((a, b) => compareDesc(new Date(a.data.pubDate), new Date(b.data.pubDate)));
-	return posts;
-}
-
 const isAtDEV = import.meta.env.DEV;
 const { count: blogCount } = Astro.props;
 
 let allBlogPosts = await getCollection('blog');
-allBlogPosts = sortByDates(allBlogPosts);
+allBlogPosts.sort((a, b) => compareDesc(new Date(a.data.pubDate), new Date(b.data.pubDate)));
 allBlogPosts = allBlogPosts.filter((post) => isAtDEV || !post.data.draft);
 allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
 ---
