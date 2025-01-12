@@ -1,23 +1,28 @@
 ---
 import { getCollection } from "astro:content";
-import { format } from "date-fns";
-import { Image } from "astro:assets";
+import { format, compareDesc } from "date-fns";
 
 interface Props {
 	count?: number;
+}
+
+function sortByDates(posts) {
+	posts.sort((a, b) => compareDesc(new Date(a.data.pubDate), new Date(b.data.pubDate)));
+	return posts;
 }
 
 const isAtDEV = import.meta.env.DEV;
 const { count: blogCount } = Astro.props;
 
 let allBlogPosts = await getCollection('blog');
+allBlogPosts = sortByDates(allBlogPosts);
 allBlogPosts = allBlogPosts.filter((post) => isAtDEV || !post.data.draft);
 allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
 ---
 
 <ul class="space-y-4">
 	{
-		allBlogPosts.slice(0, 4).map((post) => (
+		allBlogPosts.map((post) => (
 			<li>
 				<div class="text-sm space-x-4">
 					<span class="text-neutral-500">
