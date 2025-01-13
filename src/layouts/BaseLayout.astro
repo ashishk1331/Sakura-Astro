@@ -16,17 +16,21 @@ const frontmatter = Astro.props.frontmatter || null;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
 
-    {frontmatter && (
-      <>
-        <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:description" content={frontmatter.description} />
-        <meta property="og:image" content={frontmatter.ogImage} />
-      </>
-    )}
+    {
+      frontmatter && (
+        <>
+          <meta property="og:title" content={frontmatter.title} />
+          <meta property="og:description" content={frontmatter.description} />
+          <meta property="og:image" content={frontmatter.ogImage} />
+        </>
+      )
+    }
 
     <ViewTransitions />
   </head>
-  <body class="lg:w-[80ch] min-h-screen mx-auto flex flex-col justify-between gap-8 p-8 lg:p-16 bg-neutral-50 text-slate-950">
+  <body
+    class="lg:w-[80ch] min-h-screen mx-auto flex flex-col justify-between gap-8 p-8 pb-0 lg:p-16 lg:pb-0 bg-neutral-50 text-slate-950"
+  >
     <Header />
     <slot />
     <Footer />

@@ -4,6 +4,8 @@ import Label from "../components/Label.astro";
 import { Image } from "astro:assets";
 import BlogPosts from "../components/BlogPosts.astro";
 
+import BlogBanner from "../assets/blog-banner.webp";
+
 import ZoroImage from "../assets/zoro-blond.jpg";
 import TetraLogo from "../assets/logos/tetrapack_logo.svg";
 import FolderLogo from "../assets/logos/folder_routing_logo.svg";
@@ -14,115 +16,122 @@ import ImageAlgoLogo from "../assets/logos/imgs_logo.svg";
 import BFCompilerLogo from "../assets/logos/compiler_logo.svg";
 
 const tetra_data = {
-	title: "tetrapack",
-	link: "https://tetra-docs.vercel.app/",
-	imageSource: TetraLogo.src,
+  title: "tetrapack",
+  link: "https://tetra-docs.vercel.app/",
+  imageSource: TetraLogo.src,
 };
 const folder_routing_data = {
-	title: "folder-routing",
-	link: "https://github.com/ashishk1331/folder-routing",
-	imageSource: FolderLogo.src,
+  title: "folder-routing",
+  link: "https://github.com/ashishk1331/folder-routing",
+  imageSource: FolderLogo.src,
 };
 
 const crack_the_nut_data = {
-	title: "crack the nut",
-	link: "https://flower-stork-026.notion.site/Crack-The-Nut-Nov-24-edition-12e8d9750c69801a83f6ea583895b86e",
-	imageSource: CrackNutLogo.src,
+  title: "crack the nut",
+  link: "https://flower-stork-026.notion.site/Crack-The-Nut-Nov-24-edition-12e8d9750c69801a83f6ea583895b86e",
+  imageSource: CrackNutLogo.src,
 };
 const days_of_code_data = {
-	title: "100 days of code",
-	link: "https://100-days-of-code-ten.vercel.app/",
-	imageSource: DaysCodeLogo.src,
+  title: "100 days of code",
+  link: "https://100-days-of-code-ten.vercel.app/",
+  imageSource: DaysCodeLogo.src,
 };
 
 const bleach_db_data = {
-	title: "bleach db",
-	link: "https://github.com/ashishk1331/bleach-database",
-	imageSource: BleachLogo.src,
+  title: "bleach db",
+  link: "https://github.com/ashishk1331/bleach-database",
+  imageSource: BleachLogo.src,
 };
 const image_algos_data = {
-	title: "image algorithms repo",
-	link: "https://github.com/ashishk1331/Image-Algorithms",
-	imageSource: ImageAlgoLogo.src,
+  title: "image algorithms repo",
+  link: "https://github.com/ashishk1331/Image-Algorithms",
+  imageSource: ImageAlgoLogo.src,
 };
 const bf_compiler_data = {
-	title: "brainfuck compiler",
-	link: "https://github.com/ashishk1331/BrainFuck-Compiler",
-	imageSource: BFCompilerLogo.src,
+  title: "brainfuck compiler",
+  link: "https://github.com/ashishk1331/BrainFuck-Compiler",
+  imageSource: BFCompilerLogo.src,
 };
 ---
 
 <BaseLayout>
-	<main class="flex flex-col gap-y-8 leading-8">
-		<h1 class="text-2xl lg:text-3xl my-16">Ashish Khare</h1>
+  <main class="flex flex-col gap-y-8 leading-8">
+    <h1 class="text-2xl lg:text-3xl my-16">Ashish Khare</h1>
 
-		<Image
-			loading="eager"
-			src={ZoroImage}
-			alt="Banner about different states of labels."
-			width={512}
-			height={512}
-			class="self-center"
-		/>
+    <Image
+      loading="eager"
+      src={ZoroImage}
+      alt="Banner about different states of labels."
+      width={512}
+      height={512}
+      class="self-center"
+    />
 
-		<p>
-			Zoro on Frank Ocean's blond. I love listening to <i>Pink+White</i>.
-			Rest I spent listening to <i>Chainsmokers</i>, <i>Kendrik Lamar</i>, <i
-				>Metro Boomin</i
-			>, <i>Weeknd</i> and <i>Kanye West</i>. My Spotify wrapped placed me
-			among their top 0.1% listeners. Red heart!
-		</p>
+    <p>
+      Zoro on Frank Ocean's blond. I love listening to <i>Pink+White</i>. Rest I
+      spent listening to <i>Chainsmokers</i>, <i>Kendrik Lamar</i>, <i
+        >Metro Boomin</i
+      >, <i>Weeknd</i> and <i>Kanye West</i>. My Spotify wrapped placed me among
+      their top 0.1% listeners. Red heart!
+    </p>
 
-		<p>
-			Hello! I'm a web designer and developer. I've build web-based
-			tooling like <Label {...tetra_data} /> and <Label
-				{...folder_routing_data}
-			/>. Recently, I've found an unknown attraction towards building web
-			services in Go. I wish to onboard the Go and HTMX hype train.
-		</p>
+    <p>
+      Hello! I'm a web designer and developer. I've build web-based tooling like <Label
+        {...tetra_data}
+      /> and <Label {...folder_routing_data} />. Recently, I've found an unknown
+      attraction towards building web services in Go. I wish to onboard the Go
+      and HTMX hype train.
+    </p>
 
-		<p>
-			Do you like challenges? So do I. Here are a few for you to try like <Label
-				{...crack_the_nut_data}
-			/> and <Label {...days_of_code_data} />. Although the 100-day
-			challenge is still a work in progress, you can get a taste of what
-			it will offer from the website.
-		</p>
+    <p>
+      Do you like challenges? So do I. Here are a few for you to try like <Label
+        {...crack_the_nut_data}
+      /> and <Label {...days_of_code_data} />. Although the 100-day challenge is
+      still a work in progress, you can get a taste of what it will offer from
+      the website.
+    </p>
 
-		<p>
-			I adore python. Only the computer language! I've used it to do web
-			scraping, building APIs and even for image processing. The <Label
-				{...bleach_db_data}
-			/>, <Label {...image_algos_data} /> and <Label
-				{...bf_compiler_data}
-			/> are written in python. The simplicity of Python has captivated me
-			for years. You can write Python as if you were reading English.
-		</p>
+    <p>
+      I adore python. Only the computer language! I've used it to do web
+      scraping, building APIs and even for image processing. The <Label
+        {...bleach_db_data}
+      />, <Label {...image_algos_data} /> and <Label {...bf_compiler_data} /> are
+      written in python. The simplicity of Python has captivated me for years. You
+      can write Python as if you were reading English.
+    </p>
 
-		<p>
-			Plus, you can use it for machine learning tasks and scientific
-			computation. Isn't that ironic to hear? Hence, this is my next plan.
-			Soon I'll be writing a paragraph about it as well. Here are few
-			lines from the zen of python one could also apply in their daily
-			lives.
-		</p>
+    <p>
+      Plus, you can use it for machine learning tasks and scientific
+      computation. Isn't that ironic to hear? Hence, this is my next plan. Soon
+      I'll be writing a paragraph about it as well. Here are few lines from the
+      zen of python one could also apply in their daily lives.
+    </p>
 
-		<blockquote class="italic">
-			If the implementation is hard to explain, it's a bad idea.
-			<br />
-			If the implementation is easy to explain, it may be a good idea.
-		</blockquote>
+    <blockquote class="italic">
+      If the implementation is hard to explain, it's a bad idea.
+      <br />
+      If the implementation is easy to explain, it may be a good idea.
+    </blockquote>
 
-		<p>
-			I aim to write more, so I started working on this template. You can
-			expect blogs from me now—maybe one each week. Share your thoughts on
-			Twitter <i>@ashishk1331</i>. I'd love to hear from you!
-		</p>
+    <p>
+      I aim to write more, so I started working on this template. You can expect
+      blogs from me now—maybe one each week. Share your thoughts on Twitter <i
+        >@ashishk1331</i
+      >. I'd love to hear from you!
+    </p>
 
-		<hr />
+    <hr />
 
-		<h2>Latest Blog Posts</h2>
+    <h2>Latest Blog Posts</h2>
 
-		<BlogPosts count={4} />
-	</main>
+    <Image
+      src={BlogBanner}
+      alt="Banner for blogs section."
+      width={512}
+      height={512}
+      class="w-full self-center"
+    />
+
+    <BlogPosts count={4} />
+  </main>
 </BaseLayout>

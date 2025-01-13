@@ -34,9 +34,9 @@ Generators are functions that can be paused and resumed. They are created using 
 
 ```javascript
 function* generator() {
-	yield 1;
-	yield 2;
-	yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 }
 
 const gen = generator();
@@ -56,11 +56,11 @@ Let's say you have a list of headlines that you want to render in your component
 
 ```javascript
 const headlines = [
-	"Local Shops Thrive",
-	"Team Wins Finals",
-	"Stay Flu-Free",
-	"New Phone Launch",
-	"Sunny Week Ahead",
+  "Local Shops Thrive",
+  "Team Wins Finals",
+  "Stay Flu-Free",
+  "New Phone Launch",
+  "Sunny Week Ahead",
 ];
 ```
 
@@ -70,16 +70,16 @@ You can do it by iterating over the headlines array and rendering each headline 
 import { useState } from "react";
 
 const Headlines = () => {
-	const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
-	return (
-		<div>
-			<h1>{headlines[index]}</h1>
-			<button onClick={() => setIndex((index + 1) % headlines.length)}>
-				Next
-			</button>
-		</div>
-	);
+  return (
+    <div>
+      <h1>{headlines[index]}</h1>
+      <button onClick={() => setIndex((index + 1) % headlines.length)}>
+        Next
+      </button>
+    </div>
+  );
 };
 ```
 
@@ -87,9 +87,9 @@ This works well until you have a linear array of headlines that you want to iter
 
 ```javascript
 const headlines = [
-	"Good Morning", // Greeting message
-	"Today is Monday", // Day of the week
-	"Stay positive", // Motivational thought
+  "Good Morning", // Greeting message
+  "Today is Monday", // Day of the week
+  "Stay positive", // Motivational thought
 ];
 ```
 
@@ -99,32 +99,32 @@ But you're the megamind. You come up with an idea: why not create three function
 
 ```javascript
 function getGreetingMessage() {
-	const hours = new Date().getHours();
-	if (hours < 12) {
-		return "Good Morning";
-	} else if (hours < 18) {
-		return "Good Afternoon";
-	} else {
-		return "Good Evening";
-	}
+  const hours = new Date().getHours();
+  if (hours < 12) {
+    return "Good Morning";
+  } else if (hours < 18) {
+    return "Good Afternoon";
+  } else {
+    return "Good Evening";
+  }
 }
 
 function getDayOfTheWeek() {
-	const days = [
-		"Sunday",
-		"Monday",
-		"Tuesday",
-		"Wednesday",
-		"Thursday",
-		"Friday",
-		"Saturday",
-	];
-	return `Today is ${days[new Date().getDay()]}`;
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return `Today is ${days[new Date().getDay()]}`;
 }
 
 function getMotivationalThought() {
-	const thoughts = ["Stay positive", "Keep going", "You're awesome"];
-	return thoughts[Math.floor(Math.random() * thoughts.length)];
+  const thoughts = ["Stay positive", "Keep going", "You're awesome"];
+  return thoughts[Math.floor(Math.random() * thoughts.length)];
 }
 ```
 
@@ -134,21 +134,17 @@ Now, you can use these functions to render the headlines inside the component.
 import { useState } from "react";
 
 const Headlines = () => {
-	const pattern = [
-		getGreetingMessage,
-		getDayOfTheWeek,
-		getMotivationalThought,
-	];
-	const [index, setIndex] = useState(0);
+  const pattern = [getGreetingMessage, getDayOfTheWeek, getMotivationalThought];
+  const [index, setIndex] = useState(0);
 
-	return (
-		<div>
-			<h1>{pattern[index]()}</h1>
-			<button onClick={() => setIndex((index + 1) % pattern.length)}>
-				Next
-			</button>
-		</div>
-	);
+  return (
+    <div>
+      <h1>{pattern[index]()}</h1>
+      <button onClick={() => setIndex((index + 1) % pattern.length)}>
+        Next
+      </button>
+    </div>
+  );
 };
 ```
 
@@ -156,9 +152,9 @@ Have you noticed something? You changed the entire logic of your component. To s
 
 ```javascript
 function* patternGenerator() {
-	yield getGreetingMessage();
-	yield getDayOfTheWeek();
-	yield getMotivationalThought();
+  yield getGreetingMessage();
+  yield getDayOfTheWeek();
+  yield getMotivationalThought();
 }
 
 const pattern = patternGenerator();
@@ -192,19 +188,19 @@ To take a step forward you can also create a custom hook to handle the generator
 import { useState } from "react";
 
 function useGenerator(generator) {
-	const [gen, setGen] = useState(generator());
+  const [gen, setGen] = useState(generator());
 
-	return () => gen.next().value;
+  return () => gen.next().value;
 }
 
 const Headlines = () => {
-	const pattern = useGenerator(patternGenerator);
+  const pattern = useGenerator(patternGenerator);
 
-	return (
-		<div>
-			<h1>{pattern()}</h1>
-		</div>
-	);
+  return (
+    <div>
+      <h1>{pattern()}</h1>
+    </div>
+  );
 };
 ```
 

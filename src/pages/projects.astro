@@ -2,72 +2,72 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import { Image } from "astro:assets";
-import FolderRouting from "../assets/projects/folder-routing.webp"
-import Tetrapack from "../assets/projects/tetrapack.webp"
+import FolderRouting from "../assets/projects/folder-routing.webp";
+import Tetrapack from "../assets/projects/tetrapack.webp";
 ---
 
 <BaseLayout pageTitle="Projects">
-	<main class="flex flex-col gap-y-8 leading-8">
-		<div class="my-16">
-			<h1 class="text-2xl lg:text-3xl">Projects</h1>
-		</div>
+  <main class="flex flex-col gap-y-8 leading-8">
+    <div class="my-16">
+      <h1 class="text-2xl lg:text-3xl">Projects</h1>
+    </div>
 
-		<p>
-			A collection of small frameworks and tools to help you build APIs and web pages from Notion data. Through them, I’ve learned about servers, algorithms, and performance optimization.
-		</p>
+    <p>
+      A collection of small frameworks and tools to help you build APIs and web
+      pages from Notion data. Through them, I’ve learned about servers,
+      algorithms, and performance optimization.
+    </p>
 
-		<p class="font-thin italic">
-			Lines of code take shape,  
-			<br />
-			Purpose born in every step,  
-			<br />
-			Tools to serve the world.
-		</p>
+    <p class="font-thin italic">
+      Lines of code take shape,
+      <br />
+      Purpose born in every step,
+      <br />
+      Tools to serve the world.
+    </p>
 
-		<ul class="my-16 space-y-16">
-			<li class="space-y-8">
-				<a href="https://tetra-docs.vercel.app/" class="w-full rounded-md overflow-hidden">
-					<Image
-					  src={Tetrapack}
-					  alt="Tetrapack banner"
-					/>
-				</a>
+    <ul class="my-16 space-y-16">
+      <li class="space-y-8">
+        <a
+          href="https://tetra-docs.vercel.app/"
+          class="w-full rounded-md overflow-hidden"
+        >
+          <Image src={Tetrapack} alt="Tetrapack banner" />
+        </a>
 
-				<div class="w-full grid grid-cols-4 gap-2">
-					<p>2023</p>
-					<div class="col-span-3">
-						<h2>Tetrapack</h2>
-						<span class="text-xs leading-6">Javascript, React</span>
-						<p>
-							A simple and configurable notion API parser for 
-							react projects. It helps you render page data on
-							websites.
-						</p>
-					</div>
-				</div>
-			</li>
+        <div class="w-full grid grid-cols-4 gap-2">
+          <p>2023</p>
+          <div class="col-span-3">
+            <h2>Tetrapack</h2>
+            <span class="text-xs leading-6">Javascript, React</span>
+            <p>
+              A simple and configurable notion API parser for react projects. It
+              helps you render page data on websites.
+            </p>
+          </div>
+        </div>
+      </li>
 
-			<li class="space-y-8">
-				<a href="https://github.com/ashishk1331/folder-routing" class="w-full rounded-md overflow-hidden">
-					<Image
-					  src={FolderRouting}
-					  alt="folder-routing banner"
-					/>
-				</a>
+      <li class="space-y-8">
+        <a
+          href="https://github.com/ashishk1331/folder-routing"
+          class="w-full rounded-md overflow-hidden"
+        >
+          <Image src={FolderRouting} alt="folder-routing banner" />
+        </a>
 
-				<div class="w-full grid grid-cols-4 gap-2">
-					<p>2023</p>
-					<div class="col-span-3">
-						<h2>folder-routing</h2>
-						<span class="text-xs leading-6">Javascript, ExpressJS</span>
-						<p>
-							A thin wrapper around ExpressJS which 
-							is based on folder routing, similar to 
-							app router in NextJS.
-						</p>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</main>
+        <div class="w-full grid grid-cols-4 gap-2">
+          <p>2023</p>
+          <div class="col-span-3">
+            <h2>folder-routing</h2>
+            <span class="text-xs leading-6">Javascript, ExpressJS</span>
+            <p>
+              A thin wrapper around ExpressJS which is based on folder routing,
+              similar to app router in NextJS.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </main>
 </BaseLayout>

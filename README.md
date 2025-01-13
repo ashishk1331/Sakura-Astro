@@ -1,6 +1,7 @@
 ![image description](Sakura.webp)
 
 # Sakura Astro
+
 This is a minimal blog template, inspired from a [dribbble post](https://dribbble.com/shots/23563106--blog) by [Nicolas Solerieu](https://dribbble.com/SLRNCL). This is solely focused on writing blogs from your text editor(like a real developer).
 
 I'm working on this template, so I'll see some breaking changes sometimes! ;)
@@ -15,25 +16,25 @@ I'm working on this template, so I'll see some breaking changes sometimes! ;)
 ## Routes Defined
 
 1. Index page `/`
-	The landing page which summarizes about you.
+   The landing page which summarizes about you.
 
 2. Work page `/work`
-	Here, you can mention about your past experiences or projects that you've been working on.
+   Here, you can mention about your past experiences or projects that you've been working on.
 
 3. Contact page `/contact`
-	It holds links to all your socials and work.
+   It holds links to all your socials and work.
 
 4. About page `/about`
-	Here, you can ramble long about yourself and what you like.
+   Here, you can ramble long about yourself and what you like.
 
 5. Blog page `/blog`
-	Contains list of all written blogs under `/src/pages/posts` folder.
+   Contains list of all written blogs under `/src/pages/posts` folder.
 
 6. 404 page `/*-unknown`
-	There is also a custom 404 page.
+   There is also a custom 404 page.
 
 7. RSS feed `/rss.xml`
-	Dedicated rss route.
+   Dedicated rss route.
 
 ## How to change
 
@@ -48,6 +49,7 @@ To check further refer to `CHANGELOG.md`. It will also explains changes brought 
 Report it under `issues` tab. Be clear about it and do list steps to reproduce it.
 
 ## Want to add something?
+
 I would love to accept contributions. And now how?
 
 1. Open an issue regarding feature or bug fix
