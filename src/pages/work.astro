@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-// import { Image } from "astro:assets";
+import { Image } from "astro:assets";
+import FrontendHire from "../assets/work/frontend-hire.webp";
+import Stoira from "../assets/work/stoira.webp";
 ---
 
 <BaseLayout pageTitle="Work">
@@ -27,60 +29,49 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
 
     <ul class="my-16 space-y-16">
-      <!-- <li class="space-y-8">
-				<a href="https://go-north.vercel.app/" class="w-full rounded-md overflow-hidden">
-					<Image
-					  src="/public/banner-go-north.webp"
-					  alt="Banner about different states of labels."
-					/>
-				</a>
+      <li class="space-y-8">
+        <a href="https://stoira.com/" class="w-full rounded-md overflow-hidden">
+          <Image src={Stoira} alt="Banner about different states of labels." />
+        </a>
 
-				<div class="w-full grid grid-cols-4 gap-2">
-					<p>2024</p>
-					<div class="col-span-3">
-						<h2 class="font-bold">Founder</h2>
-						<span class="text-xs leading-6">Go North</span>
-						<p>We are a small-time design agency who craft templates and interfaces to captivate soul of the idea and help others get started with their projects faster. Feel free to contact us to know more! </p>
-					</div>
-				</div>
-			</li>
+        <div class="w-full grid grid-cols-4 gap-2">
+          <p>Jun - Sep 2024</p>
+          <div class="col-span-3">
+            <h2 class="font-bold">Frontend Developer Intern</h2>
+            <span class="text-xs leading-6">Stoira</span>
+            <p>
+              I developed websites and mobile apps for Stoira, focusing on
+              user-friendly designs and scalable solutions to deliver impactful
+              digital experiences.
+            </p>
+          </div>
+        </div>
+      </li>
 
-			<li class="space-y-8">
-				<a href="https://www.frontendhire.com/" class="w-full rounded-md overflow-hidden">
-					<Image
-					  src="/public/Frontend-hire.jpg"
-					  alt="Banner about different states of labels."
-					/>
-				</a>
+      <li class="space-y-8">
+        <a
+          href="https://www.frontendhire.com/"
+          class="w-full rounded-md overflow-hidden"
+        >
+          <Image
+            src={FrontendHire}
+            alt="Banner about different states of labels."
+          />
+        </a>
 
-				<div class="w-full grid grid-cols-4 gap-2">
-					<p>2024</p>
-					<div class="col-span-3">
-						<h2 class="font-bold">Design Engineer Intern</h2>
-						<span class="text-xs leading-6">Frontend-Hire Remote</span>
-						<p>Responsible for crafting user engaging interfaces for Frontend-Hire. Also, I've been working closely with technologies like ReactJS, handling Markdown in NextJS and Figma.</p>
-					</div>
-				</div>
-			</li>
-
-
-			<li class="space-y-8">
-				<a href="https://tetra-docs.vercel.app/" class="w-full rounded-md overflow-hidden">
-					<Image
-					  src="/public/Tetrapack.jpg"
-					  alt="Banner about different states of labels."
-					/>
-				</a>
-
-				<div class="w-full grid grid-cols-4 gap-2">
-					<p>2023 - Present</p>
-					<div class="col-span-3">
-						<h2 class="font-bold">Creator</h2>
-						<span class="text-xs leading-6">Remote</span>
-						<p>A fast and semantic Notion API data renderer for react projects.</p>
-					</div>
-				</div>
-			</li> -->
+        <div class="w-full grid grid-cols-4 gap-2">
+          <p>Apr - Jun 2024</p>
+          <div class="col-span-3">
+            <h2 class="font-bold">Design Engineer Intern</h2>
+            <span class="text-xs leading-6">Frontend-Hire</span>
+            <p>
+              Responsible for crafting user engaging interfaces for
+              Frontend-Hire. Also, I've been working closely with technologies
+              like ReactJS, handling Markdown in NextJS and Figma.
+            </p>
+          </div>
+        </div>
+      </li>
     </ul>
   </main>
 </BaseLayout>
