@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 import FeatherAdImage from "../assets/featherAd.webp";
 ---
 
-<div class="flex flex-col gap-4 my-12">
-	<a href="https://feather-website.vercel.app/" target="_blank">
+<div class="flex flex-col gap-4 my-6 md:my-12">
+	<a href="https://feather-website.vercel.app/" target="_blank" class="relative">
+		<p class="bg-white rounded shadow shadow-neutral-800/25 text-[#865DFF] px-3 absolute inset-0 m-2 font-semibold w-fit h-fit">Ad</p>
 		<Image src={FeatherAdImage} alt="Advertisment for feather app." class="rounded-md" />
 	</a>
-	<div class="flex flex-wrap items-center gap-4">
-		<p class="bg-[#865DFF] rounded text-white px-3">Ad</p>
+	<div class="flex flex-wrap justify-between items-center gap-4">
 		<p>Organize Your Life, Conquer Your To-Dos</p>
-		<a href="https://feather-website.vercel.app/" target="_blank" class="bg-[#865DFF] px-3 text-white rounded ml-auto">Download</a>
+		<a href="https://feather-website.vercel.app/" target="_blank" class="bg-[#865DFF] px-3 text-white rounded">Download</a>
 	</div>
 </div>
