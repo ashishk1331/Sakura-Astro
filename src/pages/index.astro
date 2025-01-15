@@ -15,6 +15,7 @@ import CrackNutLogo from "../assets/logos/crack_the_nut_logo.svg";
 import BleachLogo from "../assets/logos/bleach_logo.svg";
 import ImageAlgoLogo from "../assets/logos/imgs_logo.svg";
 import BFCompilerLogo from "../assets/logos/compiler_logo.svg";
+import FeatherAd from "../components/FeatherAd.astro";
 
 const tetra_data = {
   title: "tetrapack",
@@ -84,12 +85,22 @@ const bf_compiler_data = {
       can write Python as if you were reading English.
     </p>
 
+		<FeatherAd />
+
     <p>
       Plus, you can use it for machine learning tasks and scientific
       computation. Isn't that ironic to hear? Hence, this is my next plan. Soon
       I'll be writing a paragraph about it as well. Here are few lines from the
       zen of python one could also apply in their daily lives.
     </p>
+
+		<p>
+			Do you like challenges? So do I. Here are a few for you to try like <Label
+				{...crack_the_nut_data}
+			/> and <Label {...days_of_code_data} />. Although the 100-day
+			challenge is still a work in progress, you can get a taste of what
+			it will offer from the website.
+		</p>
 
     <blockquote class="italic">
       If the implementation is hard to explain, it's a bad idea.
