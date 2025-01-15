@@ -7,6 +7,7 @@ import BlogPosts from "../components/BlogPosts.astro";
 import BlogBanner from "../assets/blog-banner.webp";
 
 import Banner from "../assets/banner.webp"
+import Zoro from "../assets/zoro-blond.webp"
 import TetraLogo from "../assets/logos/tetrapack_logo.svg";
 import FolderLogo from "../assets/logos/folder_routing_logo.svg";
 import DaysCodeLogo from "../assets/logos/100_days_of_code_logo.svg";
@@ -58,15 +59,6 @@ const bf_compiler_data = {
   <main class="flex flex-col gap-y-8 leading-8">
     <h1 class="text-2xl lg:text-3xl my-16">Ashish Khare</h1>
 
-    <Image
-      loading="eager"
-      src={Banner}
-      alt="Banner about different states of labels."
-      width={512}
-      height={512}
-      class="w-full rounded self-center"
-    />
-
     <p>
       Hello! I'm a web designer and developer. I've build web-based tooling like <Label
         {...tetra_data}
@@ -113,6 +105,14 @@ const bf_compiler_data = {
     </p>
 
     <h2>Asides</h2>
+
+    <Image
+      src={Zoro}
+      alt="Banner about different states of labels."
+      width={512}
+      height={512}
+      class="w-full rounded self-center"
+    />
 
     <p>
       I love listening to <i>Pink+White</i>. Rest I
