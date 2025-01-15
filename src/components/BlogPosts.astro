@@ -21,7 +21,7 @@ allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
   {
     allBlogPosts.map((post) => (
       <li>
-        <div class="text-sm space-x-4">
+        <div class="space-x-4 text-sm">
           <span class="text-neutral-500">
             {format(post.data.pubDate, "yyyy MM")}
           </span>

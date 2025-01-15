@@ -10,12 +10,12 @@ const { frontmatter } = Astro.props;
     <h1 class="text-2xl lg:text-3xl">{frontmatter.title}</h1>
     <div class="flex items-center gap-4">
       <p>{frontmatter.author}</p>
-      <div class="w-1 h-1 aspect-square rounded-full bg-neutral-700"></div>
+      <div class="aspect-square h-1 w-1 rounded-full bg-neutral-700"></div>
       <p>{format(frontmatter.pubDate, "dd MMM yyyy")}</p>
     </div>
   </div>
   <article
-    class="prose prose-zinc max-w-[80ch] leading-8 prose-hr:border-neutral-200 prose-blockquote:italic prose-h2:font-normal prose-h3:font-normal prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:pr-4"
+    class="prose prose-zinc max-w-[80ch] leading-8 prose-h2:font-normal prose-h3:font-normal prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-neutral-200"
   >
     <slot />
   </article>

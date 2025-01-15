@@ -6,8 +6,8 @@ import BlogPosts from "../components/BlogPosts.astro";
 
 import BlogBanner from "../assets/blog-banner.webp";
 
-import Banner from "../assets/banner.webp"
-import Zoro from "../assets/zoro-blond.webp"
+import Banner from "../assets/banner.webp";
+import Zoro from "../assets/zoro-blond.webp";
 import TetraLogo from "../assets/logos/tetrapack_logo.svg";
 import FolderLogo from "../assets/logos/folder_routing_logo.svg";
 import DaysCodeLogo from "../assets/logos/100_days_of_code_logo.svg";
@@ -58,7 +58,7 @@ const bf_compiler_data = {
 
 <BaseLayout>
   <main class="flex flex-col gap-y-8 leading-8">
-    <h1 class="text-2xl lg:text-3xl my-16">Ashish Khare</h1>
+    <h1 class="my-16 text-2xl lg:text-3xl">Ashish Khare</h1>
 
     <p>
       Hello! I'm a web designer and developer. I've build web-based tooling like <Label
@@ -85,7 +85,7 @@ const bf_compiler_data = {
       can write Python as if you were reading English.
     </p>
 
-		<FeatherAd />
+    <FeatherAd />
 
     <p>
       Plus, you can use it for machine learning tasks and scientific
@@ -94,13 +94,13 @@ const bf_compiler_data = {
       zen of python one could also apply in their daily lives.
     </p>
 
-		<p>
-			Do you like challenges? So do I. Here are a few for you to try like <Label
-				{...crack_the_nut_data}
-			/> and <Label {...days_of_code_data} />. Although the 100-day
-			challenge is still a work in progress, you can get a taste of what
-			it will offer from the website.
-		</p>
+    <p>
+      Do you like challenges? So do I. Here are a few for you to try like <Label
+        {...crack_the_nut_data}
+      /> and <Label {...days_of_code_data} />. Although the 100-day challenge is
+      still a work in progress, you can get a taste of what it will offer from
+      the website.
+    </p>
 
     <blockquote class="italic">
       If the implementation is hard to explain, it's a bad idea.
@@ -122,15 +122,15 @@ const bf_compiler_data = {
       alt="Banner about different states of labels."
       width={512}
       height={512}
-      class="w-full rounded self-center"
+      class="w-full self-center rounded"
     />
 
     <p>
-      I love listening to <i>Pink+White</i>. Rest I
-      spent listening to <i>Chainsmokers</i>, <i>Kendrik Lamar</i>, <i
-        >Metro Boomin</i
-      >, <i>Weeknd</i> and <i>Kanye West</i>. My Spotify wrapped placed me among
-      their top 0.1% listeners. Red heart!
+      I love listening to <i>Pink+White</i>. Rest I spent listening to <i
+        >Chainsmokers</i
+      >, <i>Kendrik Lamar</i>, <i>Metro Boomin</i>, <i>Weeknd</i> and <i
+        >Kanye West</i
+      >. My Spotify wrapped placed me among their top 0.1% listeners. Red heart!
     </p>
 
     <hr />
