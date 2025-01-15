@@ -6,7 +6,7 @@ import BlogPosts from "../components/BlogPosts.astro";
 
 import BlogBanner from "../assets/blog-banner.webp";
 
-import ZoroImage from "../assets/zoro-blond.jpg";
+import Banner from "../assets/banner.webp"
 import TetraLogo from "../assets/logos/tetrapack_logo.svg";
 import FolderLogo from "../assets/logos/folder_routing_logo.svg";
 import DaysCodeLogo from "../assets/logos/100_days_of_code_logo.svg";
@@ -60,20 +60,12 @@ const bf_compiler_data = {
 
     <Image
       loading="eager"
-      src={ZoroImage}
+      src={Banner}
       alt="Banner about different states of labels."
       width={512}
       height={512}
-      class="self-center"
+      class="w-full rounded self-center"
     />
-
-    <p>
-      Zoro on Frank Ocean's blond. I love listening to <i>Pink+White</i>. Rest I
-      spent listening to <i>Chainsmokers</i>, <i>Kendrik Lamar</i>, <i
-        >Metro Boomin</i
-      >, <i>Weeknd</i> and <i>Kanye West</i>. My Spotify wrapped placed me among
-      their top 0.1% listeners. Red heart!
-    </p>
 
     <p>
       Hello! I'm a web designer and developer. I've build web-based tooling like <Label
@@ -118,6 +110,16 @@ const bf_compiler_data = {
       blogs from me now—maybe one each week. Share your thoughts on Twitter <i
         >@ashishk1331</i
       >. I'd love to hear from you!
+    </p>
+
+    <h2>Asides</h2>
+
+    <p>
+      I love listening to <i>Pink+White</i>. Rest I
+      spent listening to <i>Chainsmokers</i>, <i>Kendrik Lamar</i>, <i
+        >Metro Boomin</i
+      >, <i>Weeknd</i> and <i>Kanye West</i>. My Spotify wrapped placed me among
+      their top 0.1% listeners. Red heart!
     </p>
 
     <hr />
