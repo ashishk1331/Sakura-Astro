@@ -13,6 +13,8 @@ author: Ashish Khare
 
 ![banner](../../assets/blogs/go-over-rust/banner.webp)
 
+## Introduction
+
 After spending years doodling in Python, writing brilliant one-file essays and crying over why the interpreter gave off an error on line 42 when there was nothing on line 42, I decided to pick up a more comprehensive language to address issues I've always carried in my heart so long as a Java grown-up.
 
 Issues like:
@@ -26,6 +28,16 @@ And many more, so I choose to ride the hype train around the new languages. I st
 
 New languages also bring up better architecture solutions like inbuilt-concurrency, better garbage collection and some of the most annoying lexemes.
 
+## A bit about me
+
+I'm a web developer who loves building cool web tools like parsers, frameworks, and libraries. I've created web servers for APIs, SVG badges, and web scrapers to make things run smoothly and efficiently. I work with tools like TypeScript, Node.js (and recently Bun), Python and its friends, Docker, Git CI/CD, and everything in between.
+
+> Fun Fact: esbuild, written in Go back in 2020 and designed to run on a single thread, still managed to outperform every other bundler of its time.
+
+For the past year, I've been studying Rust and Go, but I was uncertain which one to keep and which one to discard. I picked up both because of the trends and hype surrounding them. However, I finally settled on Go, and here's why.
+
+## Go Features
+
 Few features of go which made me pick it over rust:
 
 1. `go func`
@@ -37,23 +49,23 @@ Few features of go which made me pick it over rust:
    ```go
    package main
    import (
-   	"fmt"
-   	"time"
+    "fmt"
+    "time"
    )
 
    func say(message string, done chan bool) {
-   	fmt.Println(message)
-   	time.Sleep(time.Second) // Simulate some work
-   	done <- true            // Signal completion
+    fmt.Println(message)
+    time.Sleep(time.Second) // Simulate some work
+    done <- true            // Signal completion
    }
 
    func main() {
-   	done := make(chan bool)
+    done := make(chan bool)
 
-   	go say("Hello, Concurrent World!", done)
+    go say("Hello, Concurrent World!", done)
 
-   	<-done // Wait for the goroutine to finish
-   	fmt.Println("Finished!")
+    <-done // Wait for the goroutine to finish
+    fmt.Println("Finished!")
    }
    ```
 
@@ -87,9 +99,15 @@ Few features of go which made me pick it over rust:
 
    It also ensures that you're more focused on building things rather than choosing best tool for the work.
 
-These three reasons were enough for me to save myself from the brutality of Rust and write simpler code.
+These three reasons were enough for me to save myself from the brutality of Rust and write simpler code. That said, both programming languages offer excellent dependency management solutions and first-class support from their communities.
+
+Picking either of them without any prior biases would be super easy for newcomers. And if you're not overthinking it, just choose one and let it grow on you!
+
+_Keep it PG._
 
 ---
+
+## Data Structures
 
 As a CS undergraduate, I also solve coding problems in the language to understand the inner workings of it better. Like implementing a tree data structure in it. Let’s take a look at how both languages implement the same structure.
 
@@ -141,27 +159,27 @@ As a CS undergraduate, I also solve coding problems in the language to understan
     import "fmt"
 
     type TreeNode[T any] struct {
-    	Value    T
-    	Children []*TreeNode[T]
+        Value    T
+        Children []*TreeNode[T]
     }
 
     func NewTreeNode[T any](value T) *TreeNode[T] {
-    	return &TreeNode[T]{Value: value}
+        return &TreeNode[T]{Value: value}
     }
 
     func (n *TreeNode[T]) AddChild(child *TreeNode[T]) {
-    	n.Children = append(n.Children, child)
+        n.Children = append(n.Children, child)
     }
 
     func main() {
-    	root := NewTreeNode(1)
-    	child1 := NewTreeNode(2)
-    	child2 := NewTreeNode(3)
+        root := NewTreeNode(1)
+        child1 := NewTreeNode(2)
+        child2 := NewTreeNode(3)
 
-    	root.AddChild(child1)
-    	root.AddChild(child2)
+        root.AddChild(child1)
+        root.AddChild(child2)
 
-    	fmt.Printf("%+v\n", root)
+        fmt.Printf("%+v\n", root)
     }
 
     ```
@@ -170,9 +188,15 @@ The Rust version heavily relies on generic types, as well as the memory safety a
 
 On the other hand, Go simply relies on old C-style pointers to get the structure up. Although the `methods` for the `TreeNode` struct don't provide excellent visual segregation like the `impl` block, they help in keeping the implementation minimal in terms of lexemes.
 
+You can imagine how deep the rabbit hole goes for Rust programmers when tackling graph algorithms.
+
 ---
 
+## Conclusion
+
 Now, one could easily point out the greater memory safety provided by Rust over Go and tell me a thousand ways in which Rust supersedes Go. I admit them all. However, Rust fails to provide a _simpler DX, simpler concepts, and sacrifices code readability and legibility._
+
+Rust has been taking the web development world by storm, especially for frontend tooling. Still, I’m sticking with Go—I just hope I’m not missing out on anything!
 
 For me, these factors ensure that your code will remain future-proof in terms of human beings. But if AI takes over, I don't know. ;)
 
