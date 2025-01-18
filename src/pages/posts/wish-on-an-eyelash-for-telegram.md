@@ -2,8 +2,6 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 
 title: "'Wish on an eyelash' for Telegram"
-cover: ../../assets/blogs/use-generators-for-magic-in-react/banner.webp
-coverAlt: random blocks
 slug: wish-on-an-eyelash-for-telegram
 pubDate: 2024-04-23
 draft: false

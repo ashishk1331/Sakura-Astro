@@ -2,8 +2,6 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 
 title: Type imports in TS
-cover: ../../assets/blogs/use-generators-for-magic-in-react/banner.webp
-coverAlt: random blocks
 slug: type-imports-in-ts
 pubDate: 2025-01-13
 draft: true

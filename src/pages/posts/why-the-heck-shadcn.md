@@ -1,9 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 
-title: "Why the heck ShadCN?"
-cover: ../../assets/blogs/use-generators-for-magic-in-react/banner.webp
-coverAlt: random blocks
+title: Why the heck ShadCN?
 slug: why-the-heck-shadcn
 pubDate: 2024-05-01
 draft: false

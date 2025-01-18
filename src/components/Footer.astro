@@ -1,48 +1,48 @@
 ---
-import { captilize } from "../utils/textUtils.js";
+import { captilize } from '../utils/textUtils.js';
 
 const LINKS = {
-  information: [
-    {
-      title: "Work",
-      href: "/work",
-    },
-    {
-      title: "Projects",
-      href: "/projects",
-    },
-    {
-      title: "Contact",
-      href: "/contact",
-    },
-  ],
-  browse: [
-    {
-      title: "Blog",
-      href: "/blog",
-    },
-    {
-      title: "Twitter",
-      href: "https://twitter.com/AshishK1331",
-    },
-  ],
+    information: [
+        {
+            title: 'Work',
+            href: '/work',
+        },
+        {
+            title: 'Projects',
+            href: '/projects',
+        },
+        {
+            title: 'Contact',
+            href: '/contact',
+        },
+    ],
+    browse: [
+        {
+            title: 'Blog',
+            href: '/blog',
+        },
+        {
+            title: 'Twitter',
+            href: 'https://twitter.com/AshishK1331',
+        },
+    ],
 };
 ---
 
 <hr />
 <footer
-  class="mb-8 mt-auto grid grid-cols-2 gap-8 overflow-hidden py-16 text-sm"
+    class="mb-8 mt-auto grid grid-cols-2 gap-8 overflow-hidden py-16 text-sm"
 >
-  {
-    Object.keys(LINKS).map((key) => (
-      <ul class="space-y-4">
-        <span class="font-medium">{captilize(key)}</span>
-        {LINKS[key].map(({ title, href }) => (
-          <li>
-            <a href={href}>{title}</a>
-          </li>
-        ))}
-      </ul>
-    ))
-  }
+    {
+        Object.keys(LINKS).map((key) => (
+            <ul class="space-y-4">
+                <span class="font-medium">{captilize(key)}</span>
+                {LINKS[key].map(({ title, href }) => (
+                    <li>
+                        <a href={href}>{title}</a>
+                    </li>
+                ))}
+            </ul>
+        ))
+    }
 </footer>

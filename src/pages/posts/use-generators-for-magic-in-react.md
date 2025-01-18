@@ -2,8 +2,6 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 
 title: Use generators for magic in React
-cover: ../../assets/blogs/use-generators-for-magic-in-react/banner.webp
-coverAlt: random blocks
 slug: use-generators-for-magic-in-react
 pubDate: 2024-12-25
 
@@ -169,10 +167,10 @@ const Headlines = () => {
 const [index, setIndex] = useState(0);
 
     return (
-    	<div>
-    		<h1>{pattern.next().value}</h1>
-    		<button onClick={() => setIndex((index + 1) % 3}>Next</button>
-    	</div>
+        <div>
+            <h1>{pattern.next().value}</h1>
+            <button onClick={() => setIndex((index + 1) % 3}>Next</button>
+        </div>
     );
 
 };

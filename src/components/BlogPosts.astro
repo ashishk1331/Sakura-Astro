@@ -1,33 +1,33 @@
 ---
-import { getCollection } from "astro:content";
-import { format, compareDesc } from "date-fns";
+import { getCollection } from 'astro:content';
+import { format, compareDesc } from 'date-fns';
 
 interface Props {
-  count?: number;
+    count?: number;
 }
 
 const isAtDEV = import.meta.env.DEV;
 const { count: blogCount } = Astro.props;
 
-let allBlogPosts = await getCollection("blog");
+let allBlogPosts = await getCollection('blog');
 allBlogPosts.sort((a, b) =>
-  compareDesc(new Date(a.data.pubDate), new Date(b.data.pubDate)),
+    compareDesc(new Date(a.data.pubDate), new Date(b.data.pubDate)),
 );
 allBlogPosts = allBlogPosts.filter((post) => isAtDEV || !post.data.draft);
 allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
 ---
 
 <ul class="space-y-4">
-  {
-    allBlogPosts.map((post) => (
-      <li>
-        <div class="space-x-4 text-sm">
-          <span class="text-neutral-500">
-            {format(post.data.pubDate, "yyyy MM")}
-          </span>
-          <a href={"/posts/" + post.data.slug}>{post.data.title}</a>
-        </div>
-      </li>
-    ))
-  }
+    {
+        allBlogPosts.map((post) => (
+            <li>
+                <div class="space-x-4 text-sm">
+                    <span class="text-neutral-500">
+                        {format(post.data.pubDate, 'yyyy MM')}
+                    </span>
+                    <a href={'/posts/' + post.data.slug}>{post.data.title}</a>
+                </div>
+            </li>
+        ))
+    }
 </ul>
