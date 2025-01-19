@@ -5,6 +5,9 @@ import CrackNutLogo from "./crack_the_nut_logo.svg";
 import FolderLogo from "./folder_routing_logo.svg";
 import ImageAlgoLogo from "./imgs_logo.svg";
 import TetraLogo from "./tetrapack_logo.svg";
+import Feather from "./feather_logo.svg";
+import Altar from "./altar_logo.svg";
+import Commit from "./commit_logo.svg";
 
 type ProjectType = {
 	title: string;
@@ -13,6 +16,21 @@ type ProjectType = {
 };
 
 export const PROJECTS: Record<string, ProjectType> = {
+	feather: {
+		title: "feather",
+		link: "https://feather-website.vercel.app/",
+		imageSource: Feather.src,
+	},
+	altar: {
+		title: "altar",
+		link: "https://github.com/ashishk1331/altar",
+		imageSource: Altar.src,
+	},
+	commit: {
+		title: "commit",
+		link: "https://commit-neon.vercel.app/",
+		imageSource: Commit.src,
+	},
 	tetra_data: {
 		title: "tetrapack",
 		link: "https://tetra-docs.vercel.app/",
