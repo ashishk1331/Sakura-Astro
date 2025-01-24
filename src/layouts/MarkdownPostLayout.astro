@@ -23,7 +23,7 @@ const { frontmatter } = Astro.props;
       <p>{frontmatter.minutesRead}</p>
     </div>
   </div>
-  <AudioPlayer />
+  {frontmatter.hasAudio && <AudioPlayer />}
   <article
     class="prose prose-zinc max-w-[80ch] leading-8 prose-h2:font-normal prose-h3:font-normal prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-neutral-200"
   >
