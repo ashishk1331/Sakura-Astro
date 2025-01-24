@@ -1,31 +1,31 @@
 ---
-import { Image } from 'astro:assets';
-import FeatherAdImage from '../assets/featherAd.webp';
+import { Image } from "astro:assets";
+import FeatherAdImage from "../assets/featherAd.webp";
 ---
 
 <div class="my-6 flex flex-col gap-4 md:my-12">
-    <a
-        href="https://feather-website.vercel.app/"
-        target="_blank"
-        class="relative"
+  <a
+    href="https://feather-website.vercel.app/"
+    target="_blank"
+    class="relative"
+  >
+    <p
+      class="absolute inset-0 m-2 h-fit w-fit rounded bg-white px-3 font-semibold text-[#865DFF] shadow shadow-neutral-800/25"
     >
-        <p
-            class="absolute inset-0 m-2 h-fit w-fit rounded bg-white px-3 font-semibold text-[#865DFF] shadow shadow-neutral-800/25"
-        >
-            An app by Ashish
-        </p>
-        <Image
-            src={FeatherAdImage}
-            alt="Advertisment for feather app."
-            class="rounded-md"
-        />
-    </a>
-    <div class="flex flex-wrap items-center justify-between gap-4">
-        <p>Organize Your Life, Conquer Your To-Dos</p>
-        <a
-            href="https://feather-website.vercel.app/"
-            target="_blank"
-            class="rounded bg-[#865DFF] px-3 text-white">Download</a
-        >
-    </div>
+      An app by Ashish
+    </p>
+    <Image
+      src={FeatherAdImage}
+      alt="Advertisment for feather app."
+      class="rounded-md"
+    />
+  </a>
+  <div class="flex flex-wrap items-center justify-between gap-4">
+    <p>Organize Your Life, Conquer Your To-Dos</p>
+    <a
+      href="https://feather-website.vercel.app/"
+      target="_blank"
+      class="rounded bg-[#865DFF] px-3 text-white">Download</a
+    >
+  </div>
 </div>

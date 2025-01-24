@@ -4,21 +4,21 @@ const imageFound = Boolean(imageSource);
 ---
 
 <style>
-    a {
-        @apply underline decoration-fuchsia-300 underline-offset-2;
-    }
+  a {
+    @apply underline decoration-fuchsia-300 underline-offset-2;
+  }
 </style>
 
 <a href={link} class="group inline-flex items-baseline">
-    {
-        imageFound && (
-            <img
-                loading="lazy"
-                src={imageSource}
-                alt=""
-                class="mx-1 h-5 w-5 self-center rounded-full"
-            />
-        )
-    }
-    <span class="lg:group-hover:underline">{title}</span>
+  {
+    imageFound && (
+      <img
+        loading="lazy"
+        src={imageSource}
+        alt=""
+        class="mx-1 h-5 w-5 self-center rounded-full"
+      />
+    )
+  }
+  <span class="lg:group-hover:underline">{title}</span>
 </a>

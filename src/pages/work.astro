@@ -1,84 +1,77 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
-import FrontendHire from '../assets/work/frontend-hire.webp';
-import Stoira from '../assets/work/stoira.webp';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import FrontendHire from "../assets/work/frontend-hire.webp";
+import Stoira from "../assets/work/stoira.webp";
 ---
 
 <BaseLayout pageTitle="Work">
-    <main class="flex flex-col gap-y-8 leading-8">
-        <div class="my-16">
-            <h1 class="text-2xl lg:text-3xl">Work Experience</h1>
-            <p>2024 - Present</p>
+  <main class="flex flex-col gap-y-8 leading-8">
+    <div class="my-16">
+      <h1 class="text-2xl lg:text-3xl">Work Experience</h1>
+      <p>2024 - Present</p>
+    </div>
+
+    <p>
+      I thrive in small teams, ideally with no more than 10 people. This type of
+      environment allows me to make meaningful contributions and play a role in
+      key decisions. I also enjoy consulting on product designs and patterns.
+      Take a look at my list of experiences to learn more about my areas of
+      expertise.
+    </p>
+
+    <p class="font-light italic">
+      React in my hands,
+      <br />
+      Components build and rebuild,
+      <br />
+      Next.js, my path.
+    </p>
+
+    <ul class="my-16 space-y-16">
+      <li class="space-y-8">
+        <a href="https://stoira.com/" class="w-full overflow-hidden rounded-md">
+          <Image src={Stoira} alt="Banner about different states of labels." />
+        </a>
+
+        <div class="grid w-full grid-cols-4 gap-2">
+          <p>Jun - Sep 2024</p>
+          <div class="col-span-3">
+            <h2 class="font-bold">Frontend Developer Intern</h2>
+            <span class="text-xs leading-6">Stoira</span>
+            <p>
+              I developed websites and mobile apps for Stoira, focusing on
+              user-friendly designs and scalable solutions to deliver impactful
+              digital experiences.
+            </p>
+          </div>
         </div>
+      </li>
 
-        <p>
-            I thrive in small teams, ideally with no more than 10 people. This
-            type of environment allows me to make meaningful contributions and
-            play a role in key decisions. I also enjoy consulting on product
-            designs and patterns. Take a look at my list of experiences to learn
-            more about my areas of expertise.
-        </p>
+      <li class="space-y-8">
+        <a
+          href="https://www.frontendhire.com/"
+          class="w-full overflow-hidden rounded-md"
+        >
+          <Image
+            src={FrontendHire}
+            alt="Banner about different states of labels."
+          />
+        </a>
 
-        <p class="font-light italic">
-            React in my hands,
-            <br />
-            Components build and rebuild,
-            <br />
-            Next.js, my path.
-        </p>
-
-        <ul class="my-16 space-y-16">
-            <li class="space-y-8">
-                <a
-                    href="https://stoira.com/"
-                    class="w-full overflow-hidden rounded-md"
-                >
-                    <Image
-                        src={Stoira}
-                        alt="Banner about different states of labels."
-                    />
-                </a>
-
-                <div class="grid w-full grid-cols-4 gap-2">
-                    <p>Jun - Sep 2024</p>
-                    <div class="col-span-3">
-                        <h2 class="font-bold">Frontend Developer Intern</h2>
-                        <span class="text-xs leading-6">Stoira</span>
-                        <p>
-                            I developed websites and mobile apps for Stoira,
-                            focusing on user-friendly designs and scalable
-                            solutions to deliver impactful digital experiences.
-                        </p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="space-y-8">
-                <a
-                    href="https://www.frontendhire.com/"
-                    class="w-full overflow-hidden rounded-md"
-                >
-                    <Image
-                        src={FrontendHire}
-                        alt="Banner about different states of labels."
-                    />
-                </a>
-
-                <div class="grid w-full grid-cols-4 gap-2">
-                    <p>Apr - Jun 2024</p>
-                    <div class="col-span-3">
-                        <h2 class="font-bold">Design Engineer Intern</h2>
-                        <span class="text-xs leading-6">Frontend-Hire</span>
-                        <p>
-                            Responsible for crafting user engaging interfaces
-                            for Frontend-Hire. Also, I've been working closely
-                            with technologies like ReactJS, handling Markdown in
-                            NextJS and Figma.
-                        </p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </main>
+        <div class="grid w-full grid-cols-4 gap-2">
+          <p>Apr - Jun 2024</p>
+          <div class="col-span-3">
+            <h2 class="font-bold">Design Engineer Intern</h2>
+            <span class="text-xs leading-6">Frontend-Hire</span>
+            <p>
+              Responsible for crafting user engaging interfaces for
+              Frontend-Hire. Also, I've been working closely with technologies
+              like ReactJS, handling Markdown in NextJS and Figma.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </main>
 </BaseLayout>

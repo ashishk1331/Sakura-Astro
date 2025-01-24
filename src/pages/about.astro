@@ -1,50 +1,47 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
-import Banner from '../assets/Banner.jpg';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import Banner from "../assets/Banner.jpg";
 ---
 
 <BaseLayout pageTitle="About">
-    <main class="flex flex-col gap-y-8 leading-8">
-        <h1 class="my-16 text-2xl lg:text-3xl">About</h1>
+  <main class="flex flex-col gap-y-8 leading-8">
+    <h1 class="my-16 text-2xl lg:text-3xl">About</h1>
 
-        <p>
-            Hey! I'm your friendly neighborhood design engineer intern. I have a
-            thing for web development, especially when it involves creating
-            sleek and user-friendly interfaces. I might be new to the scene, but
-            I'm diving in headfirst and loving every second of it.
-        </p>
+    <p>
+      Hey! I'm your friendly neighborhood design engineer intern. I have a thing
+      for web development, especially when it involves creating sleek and
+      user-friendly interfaces. I might be new to the scene, but I'm diving in
+      headfirst and loving every second of it.
+    </p>
 
-        <div class="w-full overflow-hidden rounded">
-            <Image
-                src={Banner}
-                alt="Banner about different states of labels."
-            />
-        </div>
+    <div class="w-full overflow-hidden rounded">
+      <Image src={Banner} alt="Banner about different states of labels." />
+    </div>
 
-        <p>
-            I got into web development because I wanted to make stuff that
-            people actually use and enjoy. I'm all about that mix of creativity
-            and tech, where HTML, CSS, and JavaScript come together to make
-            websites look awesome. I'm still learning, but I've already built
-            some cool projects that I'm really proud of.
-        </p>
+    <p>
+      I got into web development because I wanted to make stuff that people
+      actually use and enjoy. I'm all about that mix of creativity and tech,
+      where HTML, CSS, and JavaScript come together to make websites look
+      awesome. I'm still learning, but I've already built some cool projects
+      that I'm really proud of.
+    </p>
 
-        <p>
-            Outside of coding and designing, you'll probably find me [insert
-            hobby or interest], because even developers need a break sometimes.
-            If you're curious about what I've been up to or just want to talk
-            shop, hit me up! Thanks for checking out my portfolio.
-        </p>
+    <p>
+      Outside of coding and designing, you'll probably find me [insert hobby or
+      interest], because even developers need a break sometimes. If you're
+      curious about what I've been up to or just want to talk shop, hit me up!
+      Thanks for checking out my portfolio.
+    </p>
 
-        <p class="font-light italic">
-            I code with passion, keyboards always in my hands,
-            <br />
-            Web development's my jam, I script and I command.
-            <br />
-            With Kanye on the speakers, I code through the night,
-            <br />
-            Building digital dreams, yeah, I'm ready to ignite.
-        </p>
-    </main>
+    <p class="font-light italic">
+      I code with passion, keyboards always in my hands,
+      <br />
+      Web development's my jam, I script and I command.
+      <br />
+      With Kanye on the speakers, I code through the night,
+      <br />
+      Building digital dreams, yeah, I'm ready to ignite.
+    </p>
+  </main>
 </BaseLayout>

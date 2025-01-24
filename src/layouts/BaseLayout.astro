@@ -1,41 +1,38 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-const pageTitle = Astro.props.pageTitle || 'Home Page';
+const pageTitle = Astro.props.pageTitle || "Home Page";
 
 const frontmatter = Astro.props.frontmatter || null;
 ---
 
 <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
 
-        {
-            frontmatter && (
-                <>
-                    <meta property="og:title" content={frontmatter.title} />
-                    <meta
-                        property="og:description"
-                        content={frontmatter.description}
-                    />
-                    <meta property="og:image" content={frontmatter.ogImage} />
-                </>
-            )
-        }
+    {
+      frontmatter && (
+        <>
+          <meta property="og:title" content={frontmatter.title} />
+          <meta property="og:description" content={frontmatter.description} />
+          <meta property="og:image" content={frontmatter.ogImage} />
+        </>
+      )
+    }
 
-        <ViewTransitions />
-    </head>
-    <body
-        class="mx-auto flex min-h-screen flex-col justify-between gap-8 bg-neutral-50 p-8 pb-0 text-slate-950 lg:w-[80ch] lg:p-16 lg:pb-0"
-    >
-        <Header />
-        <slot />
-        <Footer />
-    </body>
+    <ViewTransitions />
+  </head>
+  <body
+    class="mx-auto flex min-h-screen flex-col justify-between gap-8 bg-neutral-50 p-8 pb-0 text-slate-950 lg:w-[80ch] lg:p-16 lg:pb-0"
+  >
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
