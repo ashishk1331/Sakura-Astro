@@ -1,5 +1,4 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import MarkdownLayout from "../../layouts/MarkdownPostLayout.astro";
 import { getCollection, render } from 'astro:content';
 
@@ -12,9 +11,9 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, remarkPluginFrontmatter } = await render(post);
 ---
 
-<MarkdownLayout frontmatter={post.data}>
+<MarkdownLayout frontmatter={{...post.data, ...remarkPluginFrontmatter}}>
   <Content />
 </MarkdownLayout>
