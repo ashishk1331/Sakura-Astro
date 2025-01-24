@@ -4,9 +4,9 @@ import { defineCollection, z } from "astro:content";
 const blogCollection = defineCollection({
   loader: glob({
     pattern: "**/*.md",
-    base: "./src/pages/posts",
+    base: "./src/blogs",
   }),
-  schema: ({ image }) =>
+  schema: () =>
     z.object({
       title: z.string(),
       slug: z.string(),

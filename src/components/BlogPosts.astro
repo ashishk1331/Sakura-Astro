@@ -25,7 +25,7 @@ allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
                     <span class="text-neutral-500">
                         {format(post.data.pubDate, 'yyyy MM')}
                     </span>
-                    <a href={'/posts/' + post.data.slug}>{post.data.title}</a>
+                    <a href={'/blog/' + post.data.slug}>{post.data.title}</a>
                 </div>
             </li>
         ))

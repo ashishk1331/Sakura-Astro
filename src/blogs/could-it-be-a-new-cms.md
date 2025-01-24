@@ -1,6 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-
 title: Could it be a new CMS?
 slug: could-it-be-a-new-cms
 pubDate: 2025-01-17
@@ -10,9 +8,13 @@ ogImage: /public/blogs/go-over-rust.webp
 
 description: Why I preferably picked Go over Rust.
 author: Ashish Khare
+
+todo:
+  - plug n play situation
+  -
 ---
 
-![banner](../../assets/blogs/could-it-be-a-new-cms/banner.webp)
+![banner](./assets/could-it-be-a-new-cms/banner.webp)
 
 I was about to dive into creating a new project—a CMS (Content Management System), to be precise. However, what I really needed was a simple `git submodule` to manage all the markdown files in my project. Since I was already using meta-frameworks like Astro, I had a content layer for my project. Still, I wanted more independent control over the content, akin to having a standalone data layer that I could easily plug into other projects.
 

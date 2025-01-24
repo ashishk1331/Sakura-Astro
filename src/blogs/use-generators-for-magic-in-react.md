@@ -1,6 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-
 title: Use generators for magic in React
 slug: use-generators-for-magic-in-react
 pubDate: 2024-12-25
@@ -12,7 +10,7 @@ description: Learn when to use generators to simplify logic and reduce reliance 
 author: Ashish Khare
 ---
 
-![banner](../../assets/blogs/use-generators-for-magic-in-react/banner.webp)
+![banner](./assets/use-generators-for-magic-in-react/banner.webp)
 
 Let me put it straight: you're overdosing on hooks. Even your IDs and keys are living as state in your React app. `useState` hooks trigger a side effect of updating the virtual DOM whenever the state changes. Storing irrelevant data as state is bad for performance.
 

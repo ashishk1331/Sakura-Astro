@@ -1,6 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-
 title: Mould keys not locks
 slug: mould-keys-not-locks
 pubDate: 2025-01-13
@@ -12,4 +10,4 @@ description: "How printing patterns can help you come up with better algorithms 
 author: "Ashish Khare"
 ---
 
-![banner](../../assets/blogs/type-imports-in-ts/banner.webp)
+![banner](./assets/type-imports-in-ts/banner.webp)

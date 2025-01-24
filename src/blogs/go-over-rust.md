@@ -1,6 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-
 title: Go over rust
 slug: go-over-rust
 pubDate: 2025-01-18
@@ -11,7 +9,7 @@ description: Why I preferably picked Go over Rust.
 author: Ashish Khare
 ---
 
-![banner](../../assets/blogs/go-over-rust/banner.webp)
+![banner](./assets/go-over-rust/banner.webp)
 
 ## Introduction
 
