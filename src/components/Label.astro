@@ -4,7 +4,7 @@ const imageFound = Boolean(imageSource);
 ---
 
 <style>
-  a {
+  a > span {
     @apply underline decoration-fuchsia-300 underline-offset-2;
   }
 </style>
@@ -16,7 +16,7 @@ const imageFound = Boolean(imageSource);
         loading="lazy"
         src={imageSource}
         alt=""
-        class="mx-1 h-5 w-5 self-center rounded-full"
+        class="mx-1 size-5 self-center rounded-full transition-all md:group-hover:size-8"
       />
     )
   }

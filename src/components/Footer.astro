@@ -39,7 +39,12 @@ const LINKS = {
         <span class="font-medium">{captilize(key)}</span>
         {LINKS[key].map(({ title, href }) => (
           <li>
-            <a href={href}>{title}</a>
+            <a
+              href={href}
+              class="decoration-purple-300 decoration-wavy underline-offset-2 hover:underline"
+            >
+              {title}
+            </a>
           </li>
         ))}
       </ul>

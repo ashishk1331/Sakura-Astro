@@ -7,14 +7,18 @@ const { frontmatter } = Astro.props;
 
 <style>
   .dot {
-    @apply aspect-square h-1 w-1 rounded-full bg-fuchsia-600;
+    @apply aspect-square h-1 w-1 rounded-full bg-purple-300;
   }
 </style>
 
 <BaseLayout pageTitle={frontmatter.title} frontmatter={frontmatter}>
   <a href="/blog" class="text-neutral-800">back</a>
-  <div class="my-16 space-y-4">
-    <h1 class="text-2xl lg:text-3xl">{frontmatter.title}</h1>
+  <div class="my-16 space-y-6">
+    <h1
+      class="text-2xl underline decoration-purple-300 decoration-wavy underline-offset-4 lg:text-3xl"
+    >
+      {frontmatter.title}
+    </h1>
     <div class="flex items-center gap-3 text-sm">
       <p>{frontmatter.author}</p>
       <div class="dot"></div>
@@ -25,7 +29,7 @@ const { frontmatter } = Astro.props;
   </div>
   {frontmatter.hasAudio && <AudioPlayer />}
   <article
-    class="prose prose-zinc max-w-[80ch] leading-8 prose-h2:font-normal prose-h3:font-normal prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-neutral-200"
+    class="prose prose-zinc leading-8 marker:text-purple-300 prose-h2:font-normal prose-h3:font-normal prose-blockquote:border-purple-300 prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-purple-300"
   >
     <slot />
   </article>
