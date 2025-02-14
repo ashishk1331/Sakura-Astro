@@ -29,7 +29,7 @@ const { frontmatter } = Astro.props;
   </div>
   {frontmatter.hasAudio && <AudioPlayer />}
   <article
-    class="prose prose-zinc leading-8 marker:text-purple-300 prose-h2:font-normal prose-h3:font-normal prose-blockquote:border-purple-300 prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-purple-300"
+    class="prose prose-lg prose-zinc max-w-none leading-8 marker:text-purple-300 prose-h2:font-normal prose-h3:font-normal prose-blockquote:border-purple-300 prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-purple-300"
   >
     <slot />
   </article>
