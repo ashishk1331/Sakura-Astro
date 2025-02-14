@@ -15,11 +15,11 @@ const { frontmatter } = Astro.props;
   <a href="/blog" class="text-neutral-800">back</a>
   <div class="my-16 space-y-6">
     <h1
-      class="text-2xl underline decoration-purple-300 decoration-wavy underline-offset-4 lg:text-3xl"
+      class="text-3xl underline decoration-purple-300 decoration-wavy underline-offset-4 lg:text-4xl"
     >
       {frontmatter.title}
     </h1>
-    <div class="flex items-center gap-3 text-sm">
+    <div class="flex items-center gap-3">
       <p>{frontmatter.author}</p>
       <div class="dot"></div>
       <p>{format(frontmatter.pubDate, "dd MMM yyyy")}</p>
@@ -27,7 +27,7 @@ const { frontmatter } = Astro.props;
       <p>{frontmatter.minutesRead}</p>
     </div>
   </div>
-  {frontmatter.hasAudio && <AudioPlayer />}
+  {frontmatter.hasAudio && <AudioPlayer slug={frontmatter.slug} />}
   <article
     class="prose prose-lg prose-zinc max-w-none leading-8 marker:text-purple-300 prose-h2:font-normal prose-h3:font-normal prose-blockquote:border-purple-300 prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-purple-300"
   >

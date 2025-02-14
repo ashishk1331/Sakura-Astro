@@ -1,3 +1,7 @@
+# Command to convert all .wav files to .mp3
+# Run it from the root dir
+# cd .\src\blogs\assets\; Get-ChildItem -Path . -Filter "output.wav" -Recurse | ForEach-Object { ffmpeg -i $_.FullName -b:a 192k "$($_.DirectoryName)\output.mp3" }; cd ../../..
+
 import torch
 from TTS.api import TTS
 import os

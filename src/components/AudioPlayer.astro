@@ -1,10 +1,75 @@
 ---
+interface Props {
+  slug: string;
+}
 
+const audioFiles = import.meta.glob<{ default: string }>(
+  "../blogs/assets/**/*.mp3",
+  { eager: true },
+);
+
+const audioBook: Record<string, string> = {};
+
+for (const [_, module] of Object.entries(audioFiles)) {
+  const source: string = module.default;
+  const path = source.split("/");
+  path.pop();
+  audioBook[path.pop() ?? ""] = source;
+}
+
+const { slug } = Astro.props;
+const audioSrc = audioBook[slug];
 ---
 
 <p>Listen to the article instead</p>
 
-<audio controls>
-  <source src="/song.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
+<div
+  class="custom-audio-player sticky top-1 flex w-full items-center gap-4 rounded bg-neutral-100 p-4"
+>
+  <button id="playPauseBtn" class="p-2"
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="#0a3a3a"
+      viewBox="0 0 256 256"
+      ><path
+        d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"
+      ></path></svg
+    ></button
+  >
+  <div class="relative h-1 w-full overflow-hidden rounded bg-neutral-200">
+    <div id="progressBar" class="absolute left-0 top-0 h-full bg-fuchsia-400">
+    </div>
+  </div>
+</div>
+
+<audio id="audioPlayer" src={audioSrc} hidden></audio>
+
+<script>
+  const audioPlayer = document.getElementById(
+    "audioPlayer",
+  ) as HTMLAudioElement;
+  const playPauseBtn = document.getElementById("playPauseBtn");
+  const progressBar = document.getElementById("progressBar");
+
+  playPauseBtn.addEventListener("click", () => {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      playPauseBtn.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3a3a" viewBox="0 0 256 256"><path d="M216,48V208a16,16,0,0,1-16,16H160a16,16,0,0,1-16-16V48a16,16,0,0,1,16-16h40A16,16,0,0,1,216,48ZM96,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V48A16,16,0,0,0,96,32Z"></path></svg>';
+    } else {
+      audioPlayer.pause();
+      playPauseBtn.innerHTML =
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3a3a" viewBox="0 0 256 256"><path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"></path></svg>';
+    }
+  });
+
+  audioPlayer.addEventListener("timeupdate", () => {
+    const progress = Math.max(
+      (audioPlayer.currentTime / audioPlayer.duration) * 100,
+      1,
+    );
+    progressBar.style.width = progress + "%";
+  });
+</script>
