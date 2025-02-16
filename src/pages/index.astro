@@ -44,13 +44,58 @@ import HeadingLabel from "../components/HeadingLabel.astro";
       </p>
     </HeadingLabel>
 
-    <p>
-      Do you like challenges? So do I. Here are a few for you to try like <Label
-        {...PROJECTS["crack_the_nut_data"]}
-      /> and <Label {...PROJECTS["days_of_code_data"]} />. Although the 100-day
-      challenge is still a work in progress, you can get a taste of what it will
-      offer from the website.
-    </p>
+    <HeadingLabel title="Data Scientist">
+      <div class="grid grid-cols-2">
+        {
+          ["iris-flower", "pairplot"].map((slug) => (
+            <Image
+              src={`/images/${slug}.webp`}
+              alt={slug}
+              width={512}
+              height={512}
+              class="h-full object-cover"
+            />
+          ))
+        }
+      </div>
+
+      <p>
+        Why not start by showcasing my exploratory skills with the <a
+          href="https://www.kaggle.com/code/ashishk1331/iris-dataset"
+          >Iris dataset</a
+        >? I've used Pandas, NumPy, Seaborn, and Scikit-learn to perform EDA,
+        visualization, and model training on it.
+      </p>
+
+      <ol class="list-decimal [&>li]:ml-4">
+        <p>Data Science Profiles:</p>
+        <li>
+          <a href="https://www.kaggle.com/ashishk1331">ashishk1331 @ Kaggle</a>
+        </li>
+        <li>
+          <a href="https://profiles.datawars.io/flangdev3000"
+            >flangdev3000 @ Datawars</a
+          >
+        </li>
+      </ol>
+    </HeadingLabel>
+
+    <HeadingLabel title="Challenge Architect">
+      <Image
+        src="/images/challenges-banner.webp"
+        alt="CTN challenge banner"
+        width={512}
+        height={512}
+        class="w-full"
+      />
+      <p>
+        Do you like challenges? So do I. Here are a few for you to try like <Label
+          {...PROJECTS["crack_the_nut_data"]}
+        /> and <Label {...PROJECTS["days_of_code_data"]} />. Although the
+        100-day challenge is still a work in progress, you can get a taste of
+        what it will offer from the website.
+      </p>
+    </HeadingLabel>
 
     <HeadingLabel title="Pythonista">
       <p>
@@ -93,12 +138,6 @@ import HeadingLabel from "../components/HeadingLabel.astro";
     <p>
       For my next projects, I'm building a mini ORM for python's sqlite3 module
       and bringing power of xml-like syntax to fastHTML.
-    </p>
-
-    <p>
-      Plus, you can use Python for machine learning tasks and scientific
-      computation. Isn't that ironic to hear? Hence, this is my next plan. Soon
-      I'll be writing a paragraph about it as well.
     </p>
 
     <p>
