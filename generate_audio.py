@@ -1,7 +1,3 @@
-# Command to convert all .wav files to .mp3
-# Run it from the root dir
-# cd .\src\blogs\assets\; Get-ChildItem -Path . -Filter "output.wav" -Recurse | ForEach-Object { ffmpeg -i $_.FullName -b:a 192k "$($_.DirectoryName)\output.mp3" }; cd ../../..
-
 import torch
 from TTS.api import TTS
 import os
@@ -13,7 +9,6 @@ import yaml
 
 # Set up device
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(device)
 tts = TTS("tts_models/en/vctk/vits").to(device)
 
 blog_dir = './src/blogs'
@@ -54,15 +49,15 @@ for article in articles:
     title = article['title']
     slug = article['slug']
     text_content = article['content']
-    folder_path = os.path.join('.', 'public', 'audio')
-    file_path = os.path.join(folder_path, f'{slug}.wav')
 
-    # check_folder(folder_path)
+    file_path = os.path.join('.', 'public', 'audio', f'{slug}.wav')
 
-    # if not os.path.exists(file_path) and text_content:
-    #     # Save the audio file
-    #     tts.tts_to_file(
-    #         text=text_content, 
-    #         file_path=file_path, 
-    #         speaker="p258"
-    #     )
+    print("Writing file:", file_path)
+
+    if not os.path.exists(file_path) and text_content:
+        # Save the audio file
+        tts.tts_to_file(
+            text=text_content, 
+            file_path=file_path, 
+            speaker="p258"
+        )
