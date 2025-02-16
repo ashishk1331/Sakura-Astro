@@ -7,10 +7,8 @@ const { title } = Astro.props;
 ---
 
 <div
-  class="content grid grid-cols-4 items-start rounded border-2 border-purple-100 bg-purple-50 p-4"
+  class="content flex flex-col items-start space-y-8 rounded border-2 border-primary/50 bg-primary/5 p-4"
 >
-  <h2 class="sticky top-4 col-span-1 hidden md:inline-block">{title}</h2>
-  <div class="col-span-4 space-y-8 md:col-span-3">
-    <slot />
-  </div>
+  <h2 class="text-lg md:text-xl">{title}</h2>
+  <slot />
 </div>

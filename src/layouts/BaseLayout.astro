@@ -8,7 +8,7 @@ const pageTitle = Astro.props.pageTitle || "Home Page";
 const frontmatter = Astro.props.frontmatter || null;
 ---
 
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -29,7 +29,7 @@ const frontmatter = Astro.props.frontmatter || null;
     <ViewTransitions />
   </head>
   <body
-    class="mx-auto flex min-h-screen max-w-3xl flex-col justify-between gap-8 bg-neutral-50 p-8 pb-0 text-slate-950 lg:p-16 lg:pb-0"
+    class="mx-auto flex min-h-screen max-w-3xl flex-col justify-between gap-8 bg-neutral-50 p-8 pb-0 text-slate-950 lg:p-16 lg:pb-0 dark:bg-neutral-900 dark:text-neutral-200"
   >
     <Header />
     <slot />

@@ -10,14 +10,14 @@ import HeadingLabel from "../components/HeadingLabel.astro";
 
 <style>
   a {
-    @apply underline decoration-fuchsia-300 underline-offset-2;
+    @apply underline decoration-primary underline-offset-2;
   }
 </style>
 
 <BaseLayout>
-  <main class="flex flex-col gap-8 leading-8">
+  <main class="flex flex-col gap-10 leading-8">
     <h1
-      class="my-16 text-2xl underline decoration-purple-300 decoration-wavy underline-offset-4 lg:text-3xl"
+      class="my-16 text-2xl underline decoration-primary decoration-wavy underline-offset-4 lg:text-3xl"
     >
       Ashish Khare
     </h1>
@@ -117,11 +117,9 @@ import HeadingLabel from "../components/HeadingLabel.astro";
       </p>
     </HeadingLabel>
 
-    <hr />
+    <hr class="border-primary/75" />
 
-    <h2
-      class="underline decoration-purple-300 decoration-wavy underline-offset-4"
-    >
+    <h2 class="underline decoration-primary decoration-wavy underline-offset-4">
       Latest Blog Posts
     </h2>
 

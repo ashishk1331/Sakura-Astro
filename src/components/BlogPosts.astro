@@ -17,12 +17,12 @@ allBlogPosts = allBlogPosts.filter((post) => isAtDEV || !post.data.draft);
 allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
 ---
 
-<ul class="space-y-4">
+<ul class="space-y-2">
   {
     allBlogPosts.map((post) => (
       <li>
-        <div class="space-x-4 text-sm">
-          <span class="text-purple-600">
+        <div class="space-x-4">
+          <span class="text-primary">
             {format(post.data.pubDate, "yyyy MM")}
           </span>
           <a href={"/blog/" + post.data.slug}>{post.data.title}</a>

@@ -7,19 +7,19 @@ const { frontmatter } = Astro.props;
 
 <style>
   .dot {
-    @apply aspect-square h-1 w-1 rounded-full bg-purple-300;
+    @apply aspect-square size-2 rounded-full bg-primary;
   }
 </style>
 
 <BaseLayout pageTitle={frontmatter.title} frontmatter={frontmatter}>
-  <a href="/blog" class="text-neutral-800">back</a>
+  <a href="/blog">back</a>
   <div class="my-16 space-y-6">
     <h1
-      class="text-3xl underline decoration-purple-300 decoration-wavy underline-offset-4 lg:text-4xl"
+      class="text-3xl underline decoration-primary decoration-wavy underline-offset-4 lg:text-4xl"
     >
       {frontmatter.title}
     </h1>
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-4">
       <p>{frontmatter.author}</p>
       <div class="dot"></div>
       <p>{format(frontmatter.pubDate, "dd MMM yyyy")}</p>
@@ -29,7 +29,7 @@ const { frontmatter } = Astro.props;
   </div>
   {frontmatter.hasAudio && <AudioPlayer slug={frontmatter.slug} />}
   <article
-    class="prose prose-lg prose-zinc max-w-none leading-8 marker:text-purple-300 prose-h2:font-normal prose-h3:font-normal prose-blockquote:border-purple-300 prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-purple-300"
+    class="prose prose-lg prose-zinc max-w-none pb-8 leading-8 dark:prose-invert marker:text-primary/75 prose-h2:font-normal prose-h3:font-normal prose-a:font-normal prose-blockquote:border-primary/75 prose-blockquote:pr-4 prose-blockquote:text-2xl prose-blockquote:font-thin prose-blockquote:italic prose-hr:border-primary/70 md:pb-12"
   >
     <slot />
   </article>
