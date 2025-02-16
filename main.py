@@ -13,6 +13,7 @@ import yaml
 
 # Set up device
 device = "cuda" if torch.cuda.is_available() else "cpu"
+print(device)
 tts = TTS("tts_models/en/vctk/vits").to(device)
 
 blog_dir = './src/blogs'
@@ -51,16 +52,17 @@ for md_file in md_files:
 # Process each article and save its audio
 for article in articles:
     title = article['title']
+    slug = article['slug']
     text_content = article['content']
-    folder_path = os.path.join('.', 'src', 'blogs','assets', article['slug'])
-    file_path = os.path.join(folder_path, 'output.wav')
+    folder_path = os.path.join('.', 'public', 'audio')
+    file_path = os.path.join(folder_path, f'{slug}.wav')
 
-    check_folder(folder_path)
+    # check_folder(folder_path)
 
-    if not os.path.exists(file_path) and text_content:
-        # Save the audio file
-        tts.tts_to_file(
-            text=text_content, 
-            file_path=file_path, 
-            speaker="p258"
-        )
+    # if not os.path.exists(file_path) and text_content:
+    #     # Save the audio file
+    #     tts.tts_to_file(
+    #         text=text_content, 
+    #         file_path=file_path, 
+    #         speaker="p258"
+    #     )

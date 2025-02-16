@@ -3,22 +3,7 @@ interface Props {
   slug: string;
 }
 
-const audioFiles = import.meta.glob<{ default: string }>(
-  "../blogs/assets/**/*.mp3",
-  { eager: true },
-);
-
-const audioBook: Record<string, string> = {};
-
-for (const [_, module] of Object.entries(audioFiles)) {
-  const source: string = module.default;
-  const path = source.split("/");
-  path.pop();
-  audioBook[path.pop() ?? ""] = source;
-}
-
 const { slug } = Astro.props;
-const audioSrc = audioBook[slug];
 ---
 
 <p>Listen to the article instead</p>
@@ -44,7 +29,7 @@ const audioSrc = audioBook[slug];
   </div>
 </div>
 
-<audio id="audioPlayer" src={audioSrc} hidden></audio>
+<audio id="audioPlayer" src={`/audio/${slug}.mp3`} hidden></audio>
 
 <script>
   const audioPlayer = document.getElementById(
