@@ -1,3 +1,11 @@
+# Convert all .wav to .mp3 in a folder
+# 
+# Get-ChildItem -Path ".\*.wav" | ForEach-Object {
+#   $wavFile = $_.FullName
+#   $mp3File = [System.IO.Path]::ChangeExtension($wavFile, ".mp3")
+#   ffmpeg -i "$wavFile" "$mp3File"
+# }
+
 import torch
 from TTS.api import TTS
 import os
