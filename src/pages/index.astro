@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Label from "../components/Label.astro";
 import BlogPosts from "../components/BlogPosts.astro";
@@ -107,13 +109,43 @@ import HeadingLabel from "../components/HeadingLabel.astro";
     </p>
 
     <HeadingLabel title="Asides">
+      <div class="grid grid-cols-3">
+        {
+          ["hurry-up-tomorrow", "gnx", "chromakopia"].map((slug) => (
+            <Image
+              src={`/images/${slug}.webp`}
+              alt={slug}
+              width={512}
+              height={512}
+            />
+          ))
+        }
+      </div>
       <p>
-        I love listening to <i>Pink+White</i>. Rest I spent listening to <i
-          >Chainsmokers</i
-        >, <i>Kendrik Lamar</i>, <i>Metro Boomin</i>, <i>Weeknd</i> and <i
-          >Kanye West</i
-        >. My Spotify wrapped placed me among their top 0.1% listeners. Red
-        heart!
+        My top 3 albums right now!
+
+        <br />
+
+        I've spent the last few months listening to "Hurry Up Tomorrow" by The
+        Weeknd, who recently announced that this will be his last album and that
+        he'll be retiring his stage name. Man! The vocals on "HUT" are
+        angelic—exemplary! Speaking of exemplary, Kendrick Lamar's growing
+        influence and chance to perform at the Super Bowl halftime show are
+        shining examples of his success.
+
+        <br />
+
+        "CHROMAKOPIA" is a great album. I spent all of November listening to
+        Tyler. He really put out some great work for us to appreciate. 2024 was
+        packed with great albums and projects.
+
+        <br />
+
+        This year, I've also spent most of my time listening to Kanye West. He's
+        the GOAT, no doubt. "Flashing Lights" has been on repeat since last
+        year. Then, Billie also dropped "Hit Me Hard and Soft," which was
+        exactly the experience I needed to cure my winter blues. Finneas did a
+        fantastic job with production.
       </p>
     </HeadingLabel>
 
