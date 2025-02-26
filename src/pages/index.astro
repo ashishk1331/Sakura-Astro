@@ -25,6 +25,14 @@ import HeadingLabel from "../components/HeadingLabel.astro";
     </h1>
 
     <HeadingLabel title="Web Developer">
+      <Image
+        src="/images/cover.webp"
+        alt="a cover image showcasing my badges"
+        width={512}
+        height={512}
+        class="w-full"
+      />
+
       <p>
         Hello! I'm a web designer and developer. I've build web-based tooling
         like <Label {...PROJECTS["tetra_data"]} /> and <Label
@@ -45,42 +53,39 @@ import HeadingLabel from "../components/HeadingLabel.astro";
     </HeadingLabel>
 
     <HeadingLabel title="Data Scientist">
-      <div class="grid grid-cols-2">
-        {
-          ["iris-flower", "pairplot"].map((slug) => (
-            <Image
-              src={`/images/${slug}.webp`}
-              alt={slug}
-              width={512}
-              height={512}
-              class="h-full object-cover"
-            />
-          ))
-        }
-      </div>
+      <Image
+        src="/images/cnn.webp"
+        alt="convolutional neural network layout"
+        width={512}
+        height={512}
+        class="w-full rounded"
+      />
 
       <p>
         Why not start by showcasing my exploratory skills with the <a
           href="https://www.kaggle.com/code/ashishk1331/iris-dataset"
           >Iris dataset</a
         >? I've used Pandas, NumPy, Seaborn, and Scikit-learn to perform EDA,
-        visualization, and model training on it.
+        visualization, and model training on it. Datasets I've worked with for <em
+          >Linear Regression</em
+        > and <em>Classification</em> problems: <a
+          href="https://www.kaggle.com/code/ashishk1331/palmer-penguins"
+        >
+          Palmer Penguins
+        </a>, <a href="https://www.kaggle.com/code/ashishk1331/iris-dataset">
+          Iris Dataset
+        </a> and <a href="https://www.kaggle.com/code/ashishk1331/80-cereals">
+          80 Cereals Dataset
+        </a>. Here, some <em>NLP</em> problem notebooks <a
+          href="https://www.kaggle.com/code/ashishk1331/twitter-sentiment-analysis"
+        >
+          Twitter Sentiment Analysis
+        </a>. Also, the modern art of <em>Neural Network</em> displayed in <a
+          href="https://www.kaggle.com/code/ashishk1331/mnist-dataset"
+        >
+          MNIST digits dataset
+        </a>
       </p>
-
-      <ol class="list-decimal marker:text-primary/75 [&>li]:ml-4 [&>li]:pl-2">
-        <p>Datasets I've worked with:</p>
-        <span>These links are Kaggle Notebooks.</span>
-        <li>
-          <a href="https://www.kaggle.com/code/ashishk1331/palmer-penguins">
-            Palmer Penguins
-          </a>
-        </li>
-        <li>
-          <a href="https://www.kaggle.com/code/ashishk1331/iris-dataset">
-            Iris Dataset
-          </a>
-        </li>
-      </ol>
 
       <ol class="list-decimal marker:text-primary/75 [&>li]:ml-4 [&>li]:pl-2">
         <p>Data Science Profiles:</p>
@@ -101,7 +106,7 @@ import HeadingLabel from "../components/HeadingLabel.astro";
         alt="CTN challenge banner"
         width={512}
         height={512}
-        class="w-full"
+        class="w-full rounded"
       />
       <p>
         Do you like challenges? So do I. Here are a few for you to try like <Label
@@ -113,6 +118,14 @@ import HeadingLabel from "../components/HeadingLabel.astro";
     </HeadingLabel>
 
     <HeadingLabel title="Pythonista">
+      <Image
+        src="/images/bleach-db.webp"
+        alt="banner for Bleach DB"
+        width={512}
+        height={512}
+        class="w-full rounded"
+      />
+
       <p>
         I adore python. Only the computer language! I've used it to do web
         scraping, building APIs and even for image processing. The <Label
@@ -134,6 +147,14 @@ import HeadingLabel from "../components/HeadingLabel.astro";
     <FeatherAd />
 
     <HeadingLabel title="App Developer">
+      <Image
+        src="/images/altar.webp"
+        alt="Banner for altar app"
+        width={512}
+        height={512}
+        class="w-full rounded"
+      />
+
       <p>
         Yes, I can also build mobile apps using React Native and Expo. I've
         built apps like <Label {...PROJECTS["feather"]} />, <Label
