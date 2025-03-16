@@ -17,7 +17,9 @@ import yaml
 
 # Set up device
 device = "cuda" if torch.cuda.is_available() else "cpu"
-tts = TTS("tts_models/en/vctk/vits").to(device)
+tts = TTS("tts_models/en/jenny/jenny").to(device)
+
+print(*TTS().list_models().list_models(), sep="\n")
 
 blog_dir = './src/blogs'
 
@@ -67,5 +69,5 @@ for article in articles:
         tts.tts_to_file(
             text=text_content, 
             file_path=file_path, 
-            speaker="p258"
+            # speaker="p258"
         )
