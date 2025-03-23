@@ -3,7 +3,7 @@
 # Get-ChildItem -Path ".\*.wav" | ForEach-Object {
 #   $wavFile = $_.FullName
 #   $mp3File = [System.IO.Path]::ChangeExtension($wavFile, ".mp3")
-#   ffmpeg -i "$wavFile" "$mp3File"
+#   ffmpeg -i "$wavFile" "$mp3File" -y
 # }
 
 import torch
