@@ -4,10 +4,11 @@ import { format, compareDesc } from "date-fns";
 
 interface Props {
   count?: number;
+  id?: string;
 }
 
 const isAtDEV = import.meta.env.DEV;
-const { count: blogCount } = Astro.props;
+const { count: blogCount, id: tagID } = Astro.props;
 
 let allBlogPosts = await getCollection("blog");
 allBlogPosts.sort((a, b) =>
@@ -17,7 +18,7 @@ allBlogPosts = allBlogPosts.filter((post) => isAtDEV || !post.data.draft);
 allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
 ---
 
-<ul class="space-y-2">
+<ul class="space-y-2" id={tagID}>
   {
     allBlogPosts.map((post) => (
       <li>
