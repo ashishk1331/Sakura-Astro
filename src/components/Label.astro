@@ -9,14 +9,14 @@ const imageFound = Boolean(imageSource);
   }
 </style>
 
-<a href={link} class="group inline-flex items-baseline">
+<a href={link} class="inline-flex items-baseline">
   {
     imageFound && (
       <img
         loading="lazy"
         src={imageSource}
         alt=""
-        class="mx-1 size-5 self-center rounded-full transition-all md:group-hover:size-8"
+        class="mx-1 size-5 self-center rounded-full transition-all"
       />
     )
   }

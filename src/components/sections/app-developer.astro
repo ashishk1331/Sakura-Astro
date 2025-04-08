@@ -5,6 +5,12 @@ import Label from "../Label.astro";
 import HeadingLabel from "../HeadingLabel.astro";
 ---
 
+<style>
+  a {
+    @apply underline decoration-primary underline-offset-2;
+  }
+</style>
+
 <HeadingLabel title="App Developer">
   <Image
     src="/images/altar.webp"
@@ -18,11 +24,11 @@ import HeadingLabel from "../HeadingLabel.astro";
     Yes, I can also build mobile apps using React Native and Expo. I've built
     apps like <Label {...PROJECTS["feather"]} />, <Label
       {...PROJECTS["altar"]}
-    />, and <Label {...PROJECTS["commit"]} />. They may not work properly
-    because Supabase shuts down inactive project instances. Altar and Commit
-    were great exercises for the mind, as I incorporated React Query for
-    efficient queries, a mini design system for uniform designs across entire
-    application, proper authentication and even animations.
+    />, and <Label {...PROJECTS["commit"]} />. Altar and Commit were great
+    exercises for the mind, as I incorporated React Query for efficient queries,
+    a mini design system for uniform designs across entire application, proper
+    authentication and even animations. Commit is evolving rapidly, and I'm
+    excited to turn it into a full-fledged app soon.
   </p><p>
     Web version of feather is also <a href="https://feather-roan.vercel.app/"
       >available here</a
