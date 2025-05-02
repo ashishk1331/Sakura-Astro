@@ -26,6 +26,9 @@ allBlogPosts = blogCount ? allBlogPosts.slice(0, blogCount) : allBlogPosts;
           <span class="text-primary">
             {format(post.data.pubDate, "yyyy MM")}
           </span>
+          {isAtDEV && post.data.draft && (
+            <div class="inline-block aspect-square size-2 rounded-full bg-emerald-400" />
+          )}
           <a href={"/blog/" + post.data.slug}>{post.data.title}</a>
         </div>
       </li>
