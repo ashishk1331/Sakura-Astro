@@ -579,9 +579,9 @@ import AppDeveloper from "../components/sections/app-developer.astro";
       </ul>
     </HeadingLabel>
 
-    <HeadingLabel title="Data Scientist">
+    <HeadingLabel title="Machine Learning Engineer">
       <Image
-        src="/images/cnn.webp"
+        src="/images/flower-gan.webp"
         alt="convolutional neural network layout"
         width={512}
         height={512}
@@ -589,11 +589,21 @@ import AppDeveloper from "../components/sections/app-developer.astro";
       />
 
       <p>
-        I spent most of my time understanding Neural Networks, and I see their
-        potential for improved work. I'm particularly interested in <em
-          >GANs (Generative Adversarial Networks)</em
-        > and image processing.
+        I implemented a
+        <a href="https://www.kaggle.com/code/ashishk1331/flower-gan"
+          >DCGAN (Deep Convolutional Generative Adversarial Network)</a
+        >
+        following the
+        <a href="https://arxiv.org/abs/1511.06434"
+          >2015 DCGAN paper by Alec Radford et al.</a
+        >
+        The Generator uses convolutional layers with batch normalization and ReLU
+        activations, while the Discriminator uses LeakyReLU. I was impressed by how
+        effectively the networks learned image patterns through adversarial training—essentially
+        a game between two networks trying to outsmart each other.
       </p>
+
+      <p>Yes, I love flowers and truly appreciate their beauty.</p>
 
       <ul class="list-decimal [&_li]:ml-4">
         <span>
